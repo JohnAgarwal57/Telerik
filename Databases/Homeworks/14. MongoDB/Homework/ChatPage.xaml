@@ -1,0 +1,21 @@
+﻿<Window x:Class="Homework.ChatPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChatPage" Height="350" Width="525">
+    <Grid Background="Black">
+        <TextBox Name="txtBoxMessage" HorizontalAlignment="Left" Height="23" Margin="0,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="437" Background="Black" Foreground="White"/>
+        <Button Name="btnSubmit" Content="Send" HorizontalAlignment="Left" Height="23" Margin="437,288,0,0" VerticalAlignment="Top" Width="70" Click="BtnSubmit_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.192"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.126"/>
+                    <GradientStop Color="#FFDE7914" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="txtBoxUserName" HorizontalAlignment="Left" Height="23" Margin="312,287,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <ListBox Name="lstBoxAllMessages" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="507" ItemsSource="{Binding}" Background="Black" Foreground="White"/>
+
+    </Grid>
+</Window>

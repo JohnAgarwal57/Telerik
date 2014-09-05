@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<persons>
+  <person>
+    <Name>Ivan Ivanov</Name>
+    <Address> Sofia Mladost 1</Address>
+    <Phone> 0666666666</Phone>
+  </person>
+  <person>
+    <Name>Pesho Ivanov</Name>
+    <Address> Sofia Mladost 2</Address>
+    <Phone> 0777777777</Phone>
+  </person>
+  <person>
+    <Name>Gosho Ivanov</Name>
+    <Address> Sofia Mladost 3</Address>
+    <Phone> 0888888888</Phone>
+  </person>
+  <person>
+    <Name>Dancho Ivanov</Name>
+    <Address> Sofia Mladost 3</Address>
+    <Phone> 0999999999</Phone>
+  </person>
+</persons>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogue.xsl"?>
+<catalogue xmlns:catalogue="urn:catalogue">
+	<album>
+		<name>Herzleid</name>
+		<artist>Rammstein</artist>
+		<year>1995</year>
+    <producer>Jacob Hellner</producer>
+    <price>12</price>
+    <song>
+      <title>Wollt ihr das Bett in Flammen sehen</title>
+      <duration>5</duration>
+    </song>
+    <song>
+      <title>Der Meister</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Weises Fleisch </title>
+      <duration>3</duration>
+    </song>
+	</album>
+  <album>
+    <name>Korn</name>
+    <artist>Korn</artist>
+    <year>1994</year>
+    <producer>Immortal/Epic</producer>
+    <price>12</price>
+    <song>
+      <title>Blind</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Ball Tongue</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Need To</title>
+      <duration>4</duration>
+    </song>
+  </album>
+  <album>
+    <name>Kill'em All</name>
+    <artist>Metallica</artist>
+    <year>1983</year>
+    <producer>Paul Curcio</producer>
+    <price>23</price>
+    <song>
+      <title>Hit the Lights</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>The Four Horsemen</title>
+      <duration>7</duration>
+    </song>
+    <song>
+      <title>Jump in the Fire</title>
+      <duration>3</duration>
+    </song>
+  </album>
+  <album>
+    <name>Ride the lighting</name>
+    <artist>Metallica</artist>
+    <year>1984</year>
+    <producer>Metallica</producer>
+    <price>22</price>
+    <song>
+      <title> Fight Fire with Fire</title>
+      <duration>4</duration>
+    </song>
+    <song>
+      <title>Ride the Lightning</title>
+      <duration>6</duration>
+    </song>
+    <song>
+      <title>Fade to Black</title>
+      <duration>6</duration>
+    </song>
+  </album>
+</catalogue>

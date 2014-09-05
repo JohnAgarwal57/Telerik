@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<folders>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE</Name>
+  </dir>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\en</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\en\Microsoft.VisualStudio.ProductKeyDialog.resources.dll</Name>
+    <Size>114</Size>
+  </file>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Script Diagnostics</Name>
+  </dir>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Script Diagnostics\amd64</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Script Diagnostics\amd64\DiagnosticsRemoteHelper.dll</Name>
+    <Size>110</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Script Diagnostics\amd64\DiagnosticsTap.dll</Name>
+    <Size>101</Size>
+  </file>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Xml</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Xml\Microsoft.XslDebugger.dll</Name>
+    <Size>87</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Xml\Microsoft.XslDebugger.Host.exe</Name>
+    <Size>92</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Microsoft.VisualStudio.Activities.ExpressionEvaluator.dll</Name>
+    <Size>115</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Microsoft.VisualStudio.Licensing.dll</Name>
+    <Size>94</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Microsoft.VisualStudio.ProductKeyDialog.dll</Name>
+    <Size>101</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Microsoft.VisualStudio.ProductKeyDialog.tlb</Name>
+    <Size>101</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\vsdiag_regwcf.exe</Name>
+    <Size>75</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\vsdiag_regwcf.exe.config</Name>
+    <Size>82</Size>
+  </file>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages</Name>
+  </dir>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger</Name>
+  </dir>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services</Name>
+  </dir>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services\x64</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services\x64\VsEtwProxyStub.dll</Name>
+    <Size>103</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services\AsyncCollectionAgent.dll</Name>
+    <Size>105</Size>
+  </file>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services\VsEtwService.exe</Name>
+    <Size>97</Size>
+  </file>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\X64</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\X64\msdia120.dll</Name>
+    <Size>88</Size>
+  </file>
+  <dir>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\x86</Name>
+  </dir>
+  <file>
+    <Name>C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\x86\Microsoft.VisualStudio.Debugger.Runtime.Impl.dll</Name>
+    <Size>124</Size>
+  </file>
+</folders>

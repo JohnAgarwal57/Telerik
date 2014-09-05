@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<students name="Students" xmlns:students="urn:something.com:StudentsNamespace"
+                xmlns:exams="urn:something.com:ExamsNamespace">
+    <student>
+        <name>Pesho Peshov</name>
+        <sex>male</sex>
+		<birthDate>1985-06-15</birthDate>
+		<phone>0888888888</phone>
+		<email>pesho@abv.bg</email>
+		<course>Databases</course>
+		<specialty>Web</specialty>
+		<facultyNumber>6017845</facultyNumber>
+		<takenExams>
+			<examName>C#</examName>
+			<tutor>Ivaylo Kenov</tutor>
+			<score>69.3</score>		
+			<examName>Java Script</examName>
+			<tutor>Doncho Minkov</tutor>
+			<score>67.5</score>	
+			<examName>HQC</examName>
+			<tutor>Nikolay Kostov</tutor>
+			<score>64.3</score>	
+		</takenExams>
+    </student>
+	<student>
+        <name>Gosho Goshov</name>
+        <sex>male</sex>
+		<birthDate>1983-08-19</birthDate>
+		<phone>0999999999</phone>
+		<email>gosho@abv.bg</email>
+		<course>Databases</course>
+		<specialty>Mobile</specialty>
+		<facultyNumber>6017867</facultyNumber>
+		<takenExams>
+			<examName>C#</examName>
+			<tutor>Ivaylo Kenov</tutor>
+			<score>60.3</score>		
+			<examName>Java Script</examName>
+			<tutor>Doncho Minkov</tutor>
+			<score>63.5</score>	
+			<examName>HQC</examName>
+			<tutor>Nikolay Kostov</tutor>
+			<score>69.3</score>	
+		</takenExams>
+    </student>
+</students>

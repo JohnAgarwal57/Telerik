@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<albums>
+  <album>
+    <Name>Herzleid</Name>
+    <Author>Rammstein</Author>
+  </album>
+  <album>
+    <Name>Korn</Name>
+    <Author>Korn</Author>
+  </album>
+  <album>
+    <Name>Kill'em All</Name>
+    <Author>Metallica</Author>
+  </album>
+  <album>
+    <Name>Ride the lighting</Name>
+    <Author>Metallica</Author>
+  </album>
+</albums>

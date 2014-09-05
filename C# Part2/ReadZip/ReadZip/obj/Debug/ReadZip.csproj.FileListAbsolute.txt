@@ -1,0 +1,16 @@
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\bin\Debug\ReadZip.exe.config
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\obj\Debug\ReadZip.csprojResolveAssemblyReference.cache
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\bin\Debug\ReadZip.exe
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\bin\Debug\ReadZip.pdb
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\obj\Debug\ReadZip.exe
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\obj\Debug\ReadZip.pdb
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\bin\Debug\Ionic.Zip.dll
+C:\Users\Mastermind\Downloads\ReadZip\ReadZip\bin\Debug\Ionic.Zip.xml
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\bin\Debug\ReadZip.exe.config
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\obj\Debug\ReadZip.exe
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\obj\Debug\ReadZip.pdb
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\bin\Debug\ReadZip.exe
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\bin\Debug\ReadZip.pdb
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\bin\Debug\Ionic.Zip.dll
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\bin\Debug\Ionic.Zip.xml
+D:\Dropbox\Telerik\GitHub\Telerik\C# Part2\ReadZip\ReadZip\obj\Debug\ReadZip.csprojResolveAssemblyReference.cache

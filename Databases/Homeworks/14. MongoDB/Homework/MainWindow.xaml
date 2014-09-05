@@ -1,0 +1,20 @@
+﻿<Window x:Class="Homework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Crowd Chat" Height="350" Width="525">
+    <Grid Background="Black">
+        <Button Name="btnLogin" Content="Login" HorizontalAlignment="Center" Margin="0,136,0,0" VerticalAlignment="Top" Width="75" Click="BtnLogin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.192"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.126"/>
+                    <GradientStop Color="#FFDE7914" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Nickname" HorizontalAlignment="Center" Margin="0,77,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.101,-0.125" Foreground="White"/>
+        <TextBox Name="txtBoxUserName" HorizontalAlignment="Center" Height="23" Margin="0,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>
