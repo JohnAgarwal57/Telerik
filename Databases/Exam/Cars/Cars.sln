@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{82C514D2-B139-4F6F-A700-77121DB420C7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Models", "Cars.Models\Cars.Models.csproj", "{4284C531-A8FD-427F-BC64-728E45CCF4B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Data", "Cars.Data\Cars.Data.csproj", "{67CEBDF2-CADD-4E0B-81E4-CCEB50C41306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars.Operate", "Cars.Operate\Cars.Operate.csproj", "{767271BC-29D0-4334-B496-BDC48F1CF3A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4284C531-A8FD-427F-BC64-728E45CCF4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4284C531-A8FD-427F-BC64-728E45CCF4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4284C531-A8FD-427F-BC64-728E45CCF4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4284C531-A8FD-427F-BC64-728E45CCF4B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CEBDF2-CADD-4E0B-81E4-CCEB50C41306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CEBDF2-CADD-4E0B-81E4-CCEB50C41306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CEBDF2-CADD-4E0B-81E4-CCEB50C41306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CEBDF2-CADD-4E0B-81E4-CCEB50C41306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767271BC-29D0-4334-B496-BDC48F1CF3A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767271BC-29D0-4334-B496-BDC48F1CF3A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767271BC-29D0-4334-B496-BDC48F1CF3A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767271BC-29D0-4334-B496-BDC48F1CF3A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
