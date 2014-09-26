@@ -1,0 +1,29 @@
+<div class="container col-md-12" ng-controller="GameStatusCtrl">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 big-text tic-tac-toe-table-container">
+            <h3 class="gamePlayersInfo pull-left col-md-6 red" ng-if="hasTwoPlayers">{{ firstPlayer }} [X]</h3>
+            <h3 class="gamePlayersInfo pull-right col-md-6 blue" ng-if="hasTwoPlayers">{{ secondPlayer }} [O]</h3>
+
+            <table class="tic-tac-toe-table" ng-class="cursorClass">
+                <tr>
+                    <td ng-class="{red: board[0] == 'X', blue: board[0] == 'O'}" ng-click="click(0, 0)">{{ board[0] }}</td>
+                    <td ng-class="{red: board[1] == 'X', blue: board[1] == 'O'}" ng-click="click(0, 1)">{{ board[1] }}</td>
+                    <td ng-class="{red: board[2] == 'X', blue: board[2] == 'O'}" ng-click="click(0, 2)">{{ board[2] }}</td>
+                </tr>
+                <tr>
+                    <td ng-class="{red: board[3] == 'X', blue: board[3] == 'O'}" ng-click="click(1, 0)">{{ board[3] }}</td>
+                    <td ng-class="{red: board[4] == 'X', blue: board[4] == 'O'}" ng-click="click(1, 1)">{{ board[4] }}</td>
+                    <td ng-class="{red: board[5] == 'X', blue: board[5] == 'O'}" ng-click="click(1, 2)">{{ board[5] }}</td>
+                </tr>
+                <tr>
+                    <td ng-class="{red: board[6] == 'X', blue: board[6] == 'O'}" ng-click="click(2, 0)">{{ board[6] }}</td>
+                    <td ng-class="{red: board[7] == 'X', blue: board[7] == 'O'}" ng-click="click(2, 1)">{{ board[7] }}</td>
+                    <td ng-class="{red: board[8] == 'X', blue: board[8] == 'O'}" ng-click="click(2, 2)">{{ board[8] }}</td>
+                </tr>
+            </table>
+
+            <a href="#/my-games" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>

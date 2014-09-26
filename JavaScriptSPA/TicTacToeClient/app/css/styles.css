@@ -1,0 +1,88 @@
+ul {
+    list-style-type: none;
+}
+
+span {
+    font-size: 20px;
+}
+
+.image-container {
+    width: 50%;
+    height: 550px;
+}
+
+.tic-tac-toe-image {
+    margin-top: 40px;
+    width: 80px;
+    height: 80px;
+}
+
+.table {
+    width: 50%;
+    height: 550px;
+}
+
+.image-table, .table {
+    position: absolute;
+    left: 25%;
+    top: 55px;
+}
+
+.small-text-box {
+    width: 200px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+.jumbotron table {
+    width : 100%
+}
+
+.jumbotron th, .jumbotron tr {
+    text-align: center;
+}
+
+.tic-tac-toe-table-container {
+    text-align: center;
+}
+
+.tic-tac-toe-table, .tic-tac-toe-table tr, .tic-tac-toe-table td {
+    margin: 0 auto;
+    border: 1px solid white;
+}
+
+.tic-tac-toe-table.notAllowed td {
+    cursor: not-allowed;
+}
+
+.tic-tac-toe-table.allowed td {
+    cursor: crosshair;
+}
+
+.tic-tac-toe-table td {
+    font-size: 1.8em;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+}
+
+.tic-tac-toe-table td:hover {
+    background-color: slategray;
+}
+
+h3.gamePlayersInfo {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+h3.gameStatusInfo {
+    margin-top: 25px;
+}
+
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
+}

@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <div class="pull-right">
+        Search:
+        <input type="text" ng-model="search"/>
+    </div>
+    <table>
+        <col width="200px" />
+        <col width="200px" />
+        <col width="200px" />
+        <col width="200px" />
+        <th>Score</th>
+        <th>Username</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <tr ng-repeat="score in highScore | orderBy: score.Score | filter: search">
+            <td>{{ score.Score }}</td>
+            <td>{{ score.User }}</td>
+            <td>{{ score.Wins }}</td>
+            <td>{{ score.Losses }}</td>
+        </tr>
+    </table>
+</div>

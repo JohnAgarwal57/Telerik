@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <div class="pull-right">
+        Search:
+        <input type="text" ng-model="search"/>
+    </div>
+    <table>
+        <col width="200px" />
+        <col width="200px" />
+        <col width="200px" />
+        <col width="200px" />
+        <col width="200px" />
+        <th>Game</th>
+        <th>Opponent</th>
+        <th>Status</th>
+        <tr ng-repeat="game in games | filter: search">
+            <td>{{ game.GameName }}</td>
+            <td>{{ game.FirstPlayerName }}</td>
+            <td>{{ game.State }}</td>
+            <td><button class="btn btn-sm btn-primary" ng-click="joinGame(game.Id)">Join</button></td>
+        </tr>
+    </table>
+</div>
