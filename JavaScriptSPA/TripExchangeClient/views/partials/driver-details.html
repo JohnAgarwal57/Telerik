@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="well">
+        <h2>{{driver.name}}</h2>
+        <div>
+            <label>Upcoming Trips: {{driver.numberOfUpcomingTrips}}</label>
+
+            <label class="padding">Total Trips: {{driver.numberOfTotalTrips}}</label>
+
+            <input type="checkbox" ng-change="selectOnlyMine()" ng-model="onlyMine">Only Mine </input>
+
+            <input type="checkbox" ng-change="selectOnlDrivers()" ng-model="onlyDriver">Only Driver </input>
+
+            <select ng-model="sort" class="pull-right">
+                <option value="id" selected>None</option>
+                <option value="from">From</option>
+                <option value="to">To</option>
+                <option value="-departureDate">Departure time</option>
+            </select>
+
+            <div class="form-group">
+                <div class="row text-center" ng-if="!driver.trips">
+                    <p>
+                        No trips information
+                    </p>
+                </div>
+                <table class="table table-striped table-hover offers">
+                    <col width="25%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="35%">
+                    <thead>
+                    <tr>
+                        <th>Driver</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Departure Time</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="trip in driver.trips | orderBy: sort">
+                        <td><a href="#/driver-details/{{trip.driverId}}">{{trip.driverName}}</a></td>
+                        <td>{{trip.from}}</td>
+                        <td>{{trip.to}}</td>
+                        <td><a href="#">{{trip.departureDate}}</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

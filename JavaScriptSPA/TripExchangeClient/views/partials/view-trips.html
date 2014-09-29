@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="well">
+        <div class="pull-right">
+            <a href="#/create-trip" class="btn btn-primary" ng-show="login">Create</a>
+        </div>
+        <table class="table options" ng-show="login">
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+            <col width="25%">
+            <thead>
+            <tr>
+                <th>Sort</th>
+                <th>Order</th>
+                <th>From</th>
+                <th>To</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <div class="col-md-10">
+                        <select class="form-control" ng-model="orderBy">
+                            <option value="DepartureDate">Date</option>
+                            <option value="From">From</option>
+                            <option value="To">To</option>
+                            <option value="AvailableSeats">Available seats</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <select class="form-control" ng-model="orderType">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <select class="form-control" ng-model="from">
+                        <option ng-repeat="cityFrom in cities" value="{{cityFrom}}">{{ cityFrom }}</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <select class="form-control" ng-model="to">
+                        <option ng-repeat="cityTo in cities" value="{{cityTo}}">{{ cityTo }}</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <input type="checkbox" ng-model="finished" ng-show="login"/> <span ng-show="login"> Include finished</span>
+        <input type="checkbox" ng-model="onlyMine" ng-show="login"/> <span ng-show="login"> Only mine</span>
+        <a ng-click="search()" class="btn btn-primary pull-right">Search</a>
+
+        <br/>
+        <br/>
+        <div ng-show="login" pagination class="pull-right" total-items="totalItems" ng-model="currentPage"></div>
+        <div class="row text-center" ng-if="!trips">
+            <h1>
+                No results!!!
+            </h1>
+        </div>
+        <table class="table table-striped table-hover offers" ng-if="trips">
+            <col width="20%">
+            <col width="20%">
+            <col width="20%">
+            <col width="25%">
+            <col width="15%">
+            <thead>
+            <tr>
+                <th>Driver</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure Time</th>
+                <th ng-show="login">Is Mine</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="trip in trips">
+                <td><a href="#/driver-details/{{trip.driverId}}">{{trip.driverName}}</a></td>
+                <td>{{trip.from}}</td>
+                <td>{{trip.to}}</td>
+                <td><a href="#/trip-details/{{trip.id}}">{{trip.departureDate}}</a></td>
+                <td ng-show="login"><img ng-src="{{trip.isMine | isMine}}"/></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

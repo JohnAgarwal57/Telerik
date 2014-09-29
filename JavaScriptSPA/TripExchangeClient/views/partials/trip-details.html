@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="well">
+        <a ng-click="joinTrip(trip.id)" class="btn btn-primary pull-right">Join Trip</a>
+        <h2 class="center">{{trip.driverName}} - {{trip.departureDate}}</h2>
+
+
+        <table class="table options">
+            <col width="33%">
+            <col width="34%">
+            <col width="33%">
+            <tbody>
+            <tr>
+                <td>From: <strong>{{trip.from}}</strong></td>
+                <td>To: <strong>{{trip.to}}</strong></td>
+                <td>Number of free seets: <strong>{{trip.numberOfFreeSeats}}</strong></td>
+            </tr>
+            </tbody>
+        </table>
+        <div>
+            <ul class="passengers center">
+                <li>Passengers:</li>
+                <li ng-repeat="passenger in trip.passengers">{{passenger}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
