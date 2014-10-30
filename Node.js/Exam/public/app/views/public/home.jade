@@ -1,0 +1,22 @@
+.container
+    .jumbotron
+        h2 Passed events
+    .well
+        table.table.table-striped.center
+            col(width="40%")
+            col(width="20%")
+            col(width="20%")
+            col(width="20%")
+            thead
+                tr
+                    th Event
+                    th Creator
+                    th Organizations points
+                    th Venue points
+            tbody
+                tr(ng-repeat="event in events")
+                    td {{event.title}}
+                    td {{event.creatorName}}
+                    td {{event.organizationPoints}}
+                    td {{event.venuePoints}}
+

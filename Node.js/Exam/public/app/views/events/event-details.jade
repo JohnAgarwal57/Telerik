@@ -1,0 +1,53 @@
+.container
+    .well
+        form(name="viewEventForm").form-horizontal
+            fieldset
+                legend Event details
+                .form-group
+                    label(for="title").col-md-2.control-label Title
+                    .col-md-10
+                        input(type="text" ng-model="event.title" disabled="disabled")#title.form-control
+                .form-group
+                    label(for="description").col-md-2.control-label Description
+                    .col-md-10
+                        textarea(ng-model="event.description" disabled="disabled")#description.form-control
+                .form-group
+                    label(for="latitude").col-md-2.control-label Latitude
+                    .col-md-10
+                        input(type="text" ng-model="event.latitude" disabled="disabled")#latitude.form-control
+                .form-group
+                    label(for="longitude").col-md-2.control-label Longitude
+                    .col-md-10
+                        input(type="text" ng-model="event.longitude" disabled="disabled")#longitude.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-category") Select category:
+                    .col-md-10
+                        input(type="text" ng-model="event.category" disabled="disabled")#longitude.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-initiative") Select initiatives:
+                    .col-md-10
+                        input(type="text" ng-model="event.initiative" disabled="disabled")#longitude.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-season") Select season:
+                    .col-md-10
+                        input(type="text" ng-model="event.season" disabled="disabled")#longitude.form-control
+                .form-group
+                    label(for="date").col-md-2.control-label Date:
+                    .col-md-10
+                        input(type="text" ng-model="event.date" disabled="disabled")#date.form-control
+                .form-group
+                    label(for="date").col-md-2.control-label Creator:
+                    .col-md-10
+                        input(type="text" ng-model="event.creatorName" disabled="disabled")#date.form-control
+                .form-group
+                    label(for="date").col-md-2.control-label Organization Points:
+                    .col-md-10
+                        input(type="text" ng-model="event.organizationPoints" disabled="disabled")#date.form-control
+                .form-group
+                    label(for="date").col-md-2.control-label Venue Points:
+                    .col-md-10
+                        input(type="text" ng-model="event.venuePoints" disabled="disabled")#date.form-control
+                .pull-right
+                    button(ng-click="join(event)").btn.btn-primary Join
+                    a(href="" ng-click="leave(event)").btn.btn-primary Leave
+                    a(href="#/").btn.btn-primary Cancel

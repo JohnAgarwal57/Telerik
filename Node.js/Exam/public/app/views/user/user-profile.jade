@@ -1,0 +1,95 @@
+.container
+    .well
+        form(name="userUpdateForm").form-horizontal
+            fieldset
+                legend Update user
+                .form-group
+                    label(for="phone").col-md-2.control-label Phone
+                    .col-md-10
+                        input(type="text" placeholder="Phone" ng-model="user.phone")#phone.form-control
+                .form-group
+                    label(for="image").col-md-2.control-label Choose image:
+                    .col-md-10
+                        input(type="file" ng-model="user.image")#image.form-control
+                .form-group
+                    label(for="facebook").col-md-2.control-label Facebook profile:
+                    .col-md-10
+                        input(type="text" placeholder="Facebook profile" ng-model="user.facebook")#facebook.form-control
+                .form-group
+                    label(for="twitter").col-md-2.control-label Twitter profile:
+                    .col-md-10
+                        input(type="text" placeholder="Twitter profile:" ng-model="user.twitter")#twitter.form-control
+                .form-group
+                    label(for="linkedin").col-md-2.control-label Linkedin profile:
+                    .col-md-10
+                        input(type="text" placeholder="Linkedin profile" ng-model="user.linkedin")#linkedin.form-control
+                .form-group
+                    label(for="google").col-md-2.control-label Google+ profile:
+                    .col-md-10
+                        input(type="text" placeholder="Google+ profile:" ng-model="user.google")#google.form-control
+                .pull-right
+                    button(ng-click="update(user)" ng-disabled="userUpdateForm.$invalid").btn.btn-primary Update
+                    a(href="#/" ).btn.btn-primary Cancel
+    a(ng-click="previous()") Previous &nbsp
+    a(ng-click="next()") Next
+    .well
+        | My events
+        table.table.table-striped.center
+            col(width="40%")
+            col(width="20%")
+            col(width="20%")
+            col(width="20%")
+            thead
+                tr
+                    th Event
+                    th Creator
+                    th Organizations points
+                    th Venue points
+            tbody
+                tr(ng-repeat="event in myEvents")
+                    td {{event.title}}
+                    td {{event.creatorName}}
+                    td {{event.organizationPoints}}
+                    td {{event.venuePoints}}
+    a(ng-click="previous()") Previous &nbsp
+    a(ng-click="next()") Next
+    .well
+        | Joined events
+        table.table.table-striped.center
+            col(width="40%")
+            col(width="20%")
+            col(width="20%")
+            col(width="20%")
+            thead
+                tr
+                    th Event
+                    th Creator
+                    th Organizations points
+                    th Venue points
+            tbody
+                tr(ng-repeat="joinEvent in joinedEvents")
+                    td {{joinEvent.title}}
+                    td {{joinEvent.creatorName}}
+                    td {{joinEvent.organizationPoints}}
+                    td {{joinEvent.venuePoints}}
+    a(ng-click="previous()") Previous &nbsp
+    a(ng-click="next()") Next
+    .well
+        | Passed events
+        table.table.table-striped.center
+            col(width="40%")
+            col(width="20%")
+            col(width="20%")
+            col(width="20%")
+            thead
+                tr
+                    th Event
+                    th Creator
+                    th Organizations points
+                    th Venue points
+            tbody
+                tr(ng-repeat="passedEvent in passedEvents")
+                    td {{passedEvent.title}}
+                    td {{passedEvent.creatorName}}
+                    td {{passedEvent.organizationPoints}}
+                    td {{passedEvent.venuePoints}}

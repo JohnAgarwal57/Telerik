@@ -1,0 +1,22 @@
+.container
+    .jumbotron
+        h2 Active events
+    a(ng-click="previous()") Previous &nbsp
+    a(ng-click="next()") Next
+    .well
+        table.table.table-striped.center
+            col(width="40%")
+            col(width="30%")
+            col(width="30%")
+            thead
+                tr
+                    th Event
+                    th Date
+                    th Category
+            tbody
+                tr(ng-repeat="event in events ")
+                    td
+                        a(href="#/event-details/{{event._id}}") {{event.title}}
+                    td {{event.date}}
+                    td {{event.category}}
+

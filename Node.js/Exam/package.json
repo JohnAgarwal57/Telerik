@@ -1,0 +1,36 @@
+{
+  "name": "ClinicSystem",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.4.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penjurov/ClinicSystem.git"
+  },
+  "author": "Team Nike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penjurov/ClinicSystem/issues"
+  },
+  "homepage": "https://github.com/penjurov/ClinicSystem",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "busboy": "^0.2.9",
+    "connect-busboy": "0.0.2",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.10.0",
+    "express-session": "^1.8.2",
+    "jade": "^1.7.0",
+    "mongoose": "^3.8.17",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "stylus": "^0.49.1"
+  }
+}

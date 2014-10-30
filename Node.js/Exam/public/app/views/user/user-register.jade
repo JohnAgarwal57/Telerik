@@ -1,0 +1,72 @@
+.container
+    .well
+        form(name="userSignUpForm").form-horizontal
+            fieldset
+                legend New user
+                .form-group
+                    label(for="username").col-md-2.control-label Username
+                    .col-md-10
+                        input(type="text" placeholder="Username" ng-model="user.username" required="required")#username.form-control
+                .form-group
+                    label(for="password").col-md-2.control-label Password
+                    .col-md-10
+                        input(type="password" placeholder="Password" ng-model="user.password" required="required")#password.form-control
+                .form-group
+                    label(for="confirmation").col-md-2.control-label Confirm Password
+                    .col-md-10
+                        input(type="password" placeholder="Confirm password" ng-model="user.confirmPassword" required="required")#confirmation.form-control
+                .form-group
+                    label(for="first-name").col-md-2.control-label First name
+                    .col-md-10
+                        input(type="text" placeholder="First name" ng-model="user.firstName" required="required")#first-name.form-control
+                .form-group
+                    label(for="ast-name").col-md-2.control-label Last name
+                    .col-md-10
+                        input(type="text" placeholder="Last name" ng-model="user.lastName" required="required")#last-name.form-control
+                .form-group
+                    label(for="email").col-md-2.control-label Email
+                    .col-md-10
+                        input(type="text" placeholder="Email" ng-model="user.email" required="required")#email.form-control
+                .form-group
+                    label(for="phone").col-md-2.control-label Phone
+                    .col-md-10
+                        input(type="text" placeholder="Phone" ng-model="user.phone")#phone.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-initiative") Select initiatives:
+                    .col-md-10
+                        select.form-control(id="choose-initiative" ng-model="choosedInitiative" ng-change="chooseInitiative()")
+                            option(ng-repeat="initiative in initiatives" value="{{initiative}}") {{ initiative }}
+                    label(for="initiative").col-md-2.control-label Initiatives
+                    .col-md-10
+                        input(type="text" placeholder="Initiatives" ng-model="user.initiative" disabled='disabled')#initiative.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-season") Select season:
+                    .col-md-10
+                        select.form-control(id="choose-season" ng-model="choosedSeason" ng-change="chooseSeason()")
+                            option(ng-repeat="season in seasons" value="{{season}}") {{ season }}
+                    label(for="season").col-md-2.control-label Season
+                    .col-md-10
+                        input(type="text" placeholder="Seasons" ng-model="user.season" disabled='disabled')#season.form-control
+                .form-group
+                    label(for="image").col-md-2.control-label Choose image:
+                    .col-md-10
+                        input(type="file" placeholder="Phone" ng-model="user.image")#phone.form-control
+                .form-group
+                    label(for="facebook").col-md-2.control-label Facebook profile:
+                    .col-md-10
+                        input(type="text" placeholder="Facebook profile" ng-model="user.facebook")#facebook.form-control
+                .form-group
+                    label(for="twitter").col-md-2.control-label Twitter profile:
+                    .col-md-10
+                        input(type="text" placeholder="Twitter profile:" ng-model="user.twitter")#twitter.form-control
+                .form-group
+                    label(for="linkedin").col-md-2.control-label Linkedin profile:
+                    .col-md-10
+                        input(type="text" placeholder="Linkedin profile" ng-model="user.linkedin")#linkedin.form-control
+                .form-group
+                    label(for="google").col-md-2.control-label Google+ profile:
+                    .col-md-10
+                        input(type="text" placeholder="Google+ profile:" ng-model="user.google")#google.form-control
+                .pull-right
+                    button(ng-click="signup(user)" ng-disabled="userSignUpForm.$invalid").btn.btn-primary Register
+                    a(href="#/").btn.btn-primary Cancel

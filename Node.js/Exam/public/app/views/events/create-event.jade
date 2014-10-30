@@ -1,0 +1,43 @@
+.container
+    .well
+        form(name="eventCreateForm").form-horizontal
+            fieldset
+                legend New event
+                .form-group
+                    label(for="title").col-md-2.control-label Title
+                    .col-md-10
+                        input(type="text" placeholder="Title" ng-model="event.title" required="required")#title.form-control
+                .form-group
+                    label(for="description").col-md-2.control-label Description
+                    .col-md-10
+                        textarea(placeholder="Description" ng-model="event.description" required="required")#description.form-control
+                .form-group
+                    label(for="latitude").col-md-2.control-label Latitude
+                    .col-md-10
+                        input(type="text" placeholder="Latitude" ng-model="event.latitude")#latitude.form-control
+                .form-group
+                    label(for="longitude").col-md-2.control-label Longitude
+                    .col-md-10
+                        input(type="text" placeholder="Longitude" ng-model="event.longitude")#longitude.form-control
+                .form-group
+                    label.col-md-2.control-label(for="choose-category") Select category:
+                    .col-md-10
+                        select.form-control(id="choose-category" ng-model="event.category" required="required")
+                            option(ng-repeat="category in categories" value="{{category}}") {{ category }}
+                .form-group
+                    label.col-md-2.control-label(for="choose-initiative") Select initiatives:
+                    .col-md-10
+                        select.form-control(id="choose-initiative" ng-model="event.initiative" required="required")
+                            option(ng-repeat="initiative in initiatives" value="{{initiative}}") {{ initiative }}
+                .form-group
+                    label.col-md-2.control-label(for="choose-season") Select season:
+                    .col-md-10
+                        select.form-control(id="choose-season" ng-model="event.season" required="required")
+                            option(ng-repeat="season in seasons" value="{{season}}") {{ season }}
+                .form-group
+                    label(for="date").col-md-2.control-label Date
+                    .col-md-10
+                        input(type="date" placeholder="Date" ng-model="event.date")#date.form-control
+                .pull-right
+                    button(ng-click="create(event)" ng-disabled="eventCreateForm.$invalid").btn.btn-primary Create
+                    a(href="#/").btn.btn-primary Cancel
