@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="FirmSite.site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link href="css/site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" SkipLinkText=""
+            EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal" 
+            DataSourceID="SiteMapDataSource" StaticDisplayLevels="2">
+        </asp:Menu>
+
+        <asp:SiteMapPath ID="SiteMapPathBreadcrump" runat="server" />
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">     
+        </asp:ContentPlaceHolder>
+
+        <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+    </form>
+</body>
+</html>

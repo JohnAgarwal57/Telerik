@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="Home" description="Home Page" url="~/Home.aspx">
+    <siteMapNode title="Offices" description="Offices Page" url="~/Offices.aspx">
+      <siteMapNode title="Bulgaria" description="Bulgarian Offices" url="~/Bulgaria/BulgarianOffices.aspx">
+        <siteMapNode title="Sofia" description="Sofia Office" url="~/Bulgaria/SofiaOffice.aspx"/>
+        <siteMapNode title="Varna" description="Varna Office" url="~/Bulgaria/VarnaOffice.aspx"/>
+        <siteMapNode title="Plovdiv" description="Plovdiv Office" url="~/Bulgaria/PlovdivOffice.aspx"/>
+      </siteMapNode>
+      <siteMapNode title="UK" description="UK Offices" url="~/UK/UKOffices.aspx">
+        <siteMapNode title="London" description="London Office" url="~/UK/LondonOffice.aspx"/>
+        <siteMapNode title="Bristol" description="Bristol Office" url="~/UK/BristolOffice.aspx"/>
+        <siteMapNode title="Manchester" description="Manchester Office" url="~/UK/ManchesterOffice.aspx"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="About" description="About Page" url="~/About.aspx" />
+    <siteMapNode title="Contacts" description="Contacts Page" url="~/Contacts.aspx" />
+  </siteMapNode>
+</siteMap>

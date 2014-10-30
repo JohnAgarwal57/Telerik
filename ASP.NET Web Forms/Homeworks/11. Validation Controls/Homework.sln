@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. RegistrationValidation", "RegistrationValidation\01. RegistrationValidation.csproj", "{43F13C4F-B13C-4FD0-B178-A4B89AB2909D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationValidationGroups", "RegistrationValidationGroups\RegistrationValidationGroups.csproj", "{9EC9A4BF-ED7F-49AD-8952-363DEB9C3F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43F13C4F-B13C-4FD0-B178-A4B89AB2909D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F13C4F-B13C-4FD0-B178-A4B89AB2909D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F13C4F-B13C-4FD0-B178-A4B89AB2909D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F13C4F-B13C-4FD0-B178-A4B89AB2909D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC9A4BF-ED7F-49AD-8952-363DEB9C3F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EC9A4BF-ED7F-49AD-8952-363DEB9C3F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EC9A4BF-ED7F-49AD-8952-363DEB9C3F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EC9A4BF-ED7F-49AD-8952-363DEB9C3F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

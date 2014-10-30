@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="MasterPages.site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link href="css/site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="~/" class="navbar-brand" runat="server">Master Page Homework</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="~/About.aspx" runat="server">About me</a>
+                        </li>
+                        <li>
+                            <a href="~/Friends.aspx" runat="server">Friends</a>
+                        </li>
+                        <li>
+                            <a href="~/Hobbies.aspx" runat="server">Hobbies</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

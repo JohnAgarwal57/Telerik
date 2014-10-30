@@ -1,0 +1,69 @@
+﻿body {
+}
+
+#sidebar {
+    float: left;
+    width: 150px;
+    background: #DDFFDD;
+}
+
+#sidebar .sidebar-title {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+#main-content {
+    float: left;
+    left: 160px;
+    padding: 10px;
+}
+
+#main-content h1 {
+    color: green;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bulgarian-icon, .english-icon, .arabic-icon {
+    display: inline-block;
+    width: 200px;
+    height: 180px;
+    border: 3px solid #808080;
+    border-radius: 3px;
+    background-color: rgba(80, 80, 80, 0.40);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 20px;
+    margin: 15px;
+    font-size: 18pt;
+    color: #271674;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+    .bulgarian-icon:hover, .english-icon:hover, .arabic-icon:hover {
+        background-color: rgba(128, 128, 128, 0.70);
+    }
+
+.bulgarian-icon {
+    background-image: url('../img/bulgarian-flag.jpg');
+}
+
+.english-icon {
+    background-image: url('../img/uk-flag.jpg');
+}
+
+.arabic-icon {
+    background-image: url('../img/arabian-flag.jpg');
+}
+

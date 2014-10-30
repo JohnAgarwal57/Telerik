@@ -1,0 +1,56 @@
+﻿div.menu {
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited {
+    background-color: #EEE;
+    border: 1px #666 solid;
+    color: #666;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover {
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active {
+    background-color: #EEE;
+    color: #666;
+    text-decoration: none;
+}
+
+#SiteMapPathBreadcrump {
+    display: block;
+    color: #666;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    margin: 0;
+    background: #EEE;
+}
+
+#SiteMapPathBreadcrump a {
+    text-decoration: none;
+    color: #666;
+}
+
+#SiteMapPathBreadcrump a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Mobile", "Mobile\01. Mobile.csproj", "{232CD21F-459C-4456-9EB3-51AACD327C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind", "Northwind\Northwind.csproj", "{8981CA05-430F-4ECD-9AF4-4BDBA64D3134}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. EmployeesDetailsView", "EmployeesDetailsView\02. EmployeesDetailsView.csproj", "{49361042-1EF2-43F3-B006-857728CC6A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. EmployeeFormView", "EmployeeFormView\03. EmployeeFormView.csproj", "{F97B2BD4-5FAE-4BB1-BEB9-D8C68120FF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. EmployeesRepeater", "EmployeesRepeater\04. EmployeesRepeater.csproj", "{925D083B-D417-425C-949F-3FAE619C68C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. EmployeesListView", "EmployeesListView\05. EmployeesListView.csproj", "{1BA68188-0CB6-4FCD-BB53-5D78B3946160}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{232CD21F-459C-4456-9EB3-51AACD327C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232CD21F-459C-4456-9EB3-51AACD327C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232CD21F-459C-4456-9EB3-51AACD327C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232CD21F-459C-4456-9EB3-51AACD327C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8981CA05-430F-4ECD-9AF4-4BDBA64D3134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8981CA05-430F-4ECD-9AF4-4BDBA64D3134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8981CA05-430F-4ECD-9AF4-4BDBA64D3134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8981CA05-430F-4ECD-9AF4-4BDBA64D3134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49361042-1EF2-43F3-B006-857728CC6A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49361042-1EF2-43F3-B006-857728CC6A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49361042-1EF2-43F3-B006-857728CC6A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49361042-1EF2-43F3-B006-857728CC6A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F97B2BD4-5FAE-4BB1-BEB9-D8C68120FF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F97B2BD4-5FAE-4BB1-BEB9-D8C68120FF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F97B2BD4-5FAE-4BB1-BEB9-D8C68120FF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F97B2BD4-5FAE-4BB1-BEB9-D8C68120FF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925D083B-D417-425C-949F-3FAE619C68C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925D083B-D417-425C-949F-3FAE619C68C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925D083B-D417-425C-949F-3FAE619C68C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925D083B-D417-425C-949F-3FAE619C68C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA68188-0CB6-4FCD-BB53-5D78B3946160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA68188-0CB6-4FCD-BB53-5D78B3946160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA68188-0CB6-4FCD-BB53-5D78B3946160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA68188-0CB6-4FCD-BB53-5D78B3946160}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
