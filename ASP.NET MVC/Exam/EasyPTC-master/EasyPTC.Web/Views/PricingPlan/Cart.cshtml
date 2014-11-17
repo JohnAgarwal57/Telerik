@@ -1,0 +1,66 @@
+﻿@model List<PricingPlan>
+@using EasyPTC.Models
+
+<table class="table text-center">
+    <col width="400">
+    <col width="150">
+    <col width="150">
+    <col width="150">
+    <col width="150">
+    <thead>
+        <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Number of text ads clicks</th>
+            <th class="text-center">Price for text ads clicks</th>
+            <th class="text-center">Number of banner clicks</th>
+            <th class="text-center">Number for banner clicks</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pricingPlan in this.Model)
+        {
+            <tr>
+                <td>
+                    @pricingPlan.Name
+                </td>
+                <td>
+                    @pricingPlan.NumberOfTextAdsClicks
+                </td>
+                <td>
+                    @pricingPlan.PriceForTextAdsClicks
+                </td>
+                <td>
+                    @pricingPlan.NumberOfBannerClicks
+                </td>
+                <td>
+                    @pricingPlan.PriceForBannerClicks
+                </td>
+
+                <td>
+                    <input type="submit" class="btn btn-default" value="Remove" onclick="removeFromCart(@pricingPlan.Id)">
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pull-right">
+    <a href="/PricingPlan/Buy" class="btn btn-success">Check out</a>
+</div>
+
+
+<script>
+    function removeFromCart(id) {
+        $.ajax({
+            url: '/PricingPlan/RemoveFromCart',
+            type: 'POST',
+            data: JSON.stringify({ id: id }),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+            }
+        });
+    }
+</script>
+
