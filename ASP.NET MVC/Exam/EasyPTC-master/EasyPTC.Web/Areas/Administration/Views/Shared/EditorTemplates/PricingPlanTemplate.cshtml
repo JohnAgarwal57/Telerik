@@ -1,0 +1,16 @@
+﻿@model EasyPTC.Web.Areas.Administration.ViewModels.PrincingPlans.PricingPlanViewModel
+
+<div class="kendo-form">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <fieldset>
+                @Html.EditorFor(m => m.Name)
+                @Html.EditorFor(m => m.NumberOfTextAdsClicks)
+                @Html.EditorFor(m => m.PriceForTextAdsClicks)
+                @Html.EditorFor(m => m.NumberOfBannerClicks)
+                @Html.EditorFor(m => m.PriceForBannerClicks)
+            </fieldset>
+        </div>
+    }
+</div>

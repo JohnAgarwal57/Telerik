@@ -1,0 +1,38 @@
+﻿@using EasyPTC.Web.Areas.Administration.ViewModels.PrincingPlans;
+@{
+    ViewBag.Title = "Advertisement";
+    const string ControllerName = "PricingPlans";
+}
+<h2>@ViewBag.Title</h2>
+@(Html.Kendo()
+    .Grid<PricingPlanViewModel>()
+    .Name("grid")
+    .Columns(cols =>
+    {
+        cols.Bound(pr => pr.Id);
+        cols.Bound(pr => pr.Name);
+        cols.Bound(pr => pr.NumberOfTextAdsClicks);
+        cols.Bound(pr => pr.PriceForTextAdsClicks);
+        cols.Bound(pr => pr.NumberOfBannerClicks);
+        cols.Bound(pr => pr.PriceForBannerClicks);
+        cols.Bound(pr => pr.CreatedOn).Hidden();
+        cols.Bound(pr => pr.ModifiedOn).Hidden();
+        cols.Command(com => com.Edit()).Title("Edit");
+        cols.Command(com => com.Destroy()).Title("Delete");
+    })
+    .ColumnMenu()
+    .Pageable(page => page.Refresh(true))
+    .Sortable()
+    .Groupable()
+    .Filterable()
+    .Editable(e => e.Mode(GridEditMode.PopUp).TemplateName("PricingPlanTemplate").Window(w => w.Title("New").Width(420)))
+    .ToolBar(toolbar => toolbar.Create())
+    .DataSource(data =>
+        data
+            .Ajax()
+            .Model(m => m.Id(adv => adv.Id))
+            .Read(read => read.Action("Read", ControllerName))
+            .Create(create => create.Action("Create", ControllerName))
+            .Update(update => update.Action("Update", ControllerName))
+            .Destroy(destroy => destroy.Action("Destroy", ControllerName))
+            ))

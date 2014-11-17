@@ -1,0 +1,13 @@
+﻿@model ForumSystem.Web.Areas.Administration.ViewModels.PostViewModel
+
+<div class="kendo-form">
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <fieldset>
+                @Html.EditorFor(m => m.Title)
+                @Html.EditorFor(m => m.Content)
+            </fieldset>
+        </div>
+    }
+</div>

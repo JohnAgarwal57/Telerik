@@ -1,0 +1,60 @@
+﻿@model PostViewModel
+@using ForumSystem.Web.Areas.Administration.ViewModels;
+@{
+    const string Controller = "Posts";
+}
+
+<h2>Posts</h2>
+
+@Html.AntiForgeryToken()
+
+@(Html.Kendo().Grid<PostViewModel>()
+    .Name("grid-posts")
+    .Columns(columns =>
+    {
+        columns.Bound(model => model.Id).Width(10);
+        columns.Bound(model => model.AuthorName).Width(100);
+        columns.Bound(model => model.Title).Width(100);
+        columns.Bound(model => model.TrimContent).Width(200);
+        columns.Bound(model => model.CreatedOn).Width(200);
+        columns.Bound(model => model.ModifiedOn).Width(200);
+        columns.Bound(model => model.IsDeleted).Width(20);
+        columns.Command(command =>
+        {
+            command.Edit();
+            command.Destroy();
+        }).Width(250);
+    })
+    .DataSource(data =>
+        {
+            data.Ajax()
+                .Model(m => m.Id(h => h.Id))
+                .PageSize(10)
+                .ServerOperation(true)
+                .Read(r => r.Action("Read", Controller).Data("sendAntiForgery"))
+                .Update(up => up.Action("Update", Controller).Data("sendAntiForgery"))
+                .Destroy(del => del.Action("Destroy", Controller).Data("sendAntiForgery"))
+                .Create(create => create.Action("Create", Controller).Data("sendAntiForgery"))
+                .Events(events => events.Sync("sync_handler"));
+        }
+    )
+    .Sortable()
+    .Pageable(page => page.Refresh(true))
+    .ToolBar(toolbar => toolbar.Create())
+    .Editable(
+                e => e.Mode(GridEditMode.PopUp).TemplateName("PostTemplate").Window(w => w.Title("Create").Width(420))
+            )
+    .Filterable()
+    .Resizable(resize => resize.Columns(true))
+    .Selectable()
+)
+
+<script type="text/javascript">
+    function sendAntiForgery() {
+        return { "__RequestVerificationToken": $('input[name=__RequestVerificationToken]').val() }
+    }
+
+    function sync_handler(e) {
+        this.read();
+    }
+</script>

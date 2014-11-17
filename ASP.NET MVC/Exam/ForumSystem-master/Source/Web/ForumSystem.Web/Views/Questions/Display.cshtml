@@ -1,0 +1,9 @@
+﻿@model ForumSystem.Web.ViewModels.Questions.QuestionDisplayViewModel
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h1>@ViewBag.Title</h1>
+<div style="word-wrap:break-word;">
+    @Html.Raw(Model.Content)
+</div>
