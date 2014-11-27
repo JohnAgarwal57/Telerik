@@ -1,0 +1,97 @@
+﻿@using VehicleListingSystem.MVC.ViewModels;
+@model List<VehicleViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="well">
+    <div class="form-group">
+        @Html.Label("Manifacturer:", htmlAttributes: new { @class = "control-label col-md-2 down text-right" })
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="search-manifacturer" ng-model="query.Manifacturer" />
+        </div>
+
+        @Html.Label("Model:", htmlAttributes: new { @class = "control-label col-md-2 down text-right" })
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="search-model" ng-model="query.Model" />
+        </div>
+
+        @Html.Label("Price:", htmlAttributes: new { @class = "control-label col-md-2 down text-right" })
+        <div class="col-md-2">
+            <input type="text" class="form-control" name="search-price" ng-model="query.Price" />
+        </div>
+    </div>
+</div>
+
+<table class="table text-center">
+    <col width="120">
+    <col width="80">
+    <col width="80">
+    <col width="80">
+    <thead>
+        <tr>
+            <th class="text-center">Manifacturer</th>
+            <th class="text-center">Model</th>
+            <th class="text-center">Image</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="vehicle in vehicles | filter:query">
+            <td>{{vehicle.Manifacturer}}</td>
+            <td>{{vehicle.Model}}</td>
+            <td><img src="{{vehicle.Image}}" alt="{{vehicle.Model}}" /></td>
+            <td>
+                @Ajax.ActionLink(
+                    "Details",
+                    "LoadDetailsPartial",
+                    null,
+                    new AjaxOptions { 
+                        OnBegin = "getModel({{vehicle.Id}})", 
+                        HttpMethod = "POST", 
+                        UpdateTargetId = "result", 
+                        InsertionMode = InsertionMode.Replace, 
+                    },
+                    new { 
+                        @class = "btn btn-primary actionLink" 
+                    })
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="result" style="display:none;"></div>
+
+@Scripts.Render("~/bundles/custom")
+
+<script>
+    $(document).ready(function () {
+        $("#result").dialog({
+            autoOpen: false,
+            width: 700,
+            height: 'auto',
+            modal: false,
+        })
+    });
+
+    function openPopup(id) {
+        $("#result").dialog("open");
+    }
+
+    function getModel(id) {
+        var data = {
+            id: id
+        }
+
+        $.ajax({
+            url: '/Home/GetModel',
+            type: 'POST',
+            data: JSON.stringify(data),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                openPopup();
+            }
+        });
+    };
+</script>

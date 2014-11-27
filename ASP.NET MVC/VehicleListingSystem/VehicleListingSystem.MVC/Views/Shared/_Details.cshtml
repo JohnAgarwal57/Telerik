@@ -1,0 +1,22 @@
+﻿@model VehicleListingSystem.MVC.ViewModels.VehicleViewModel
+
+<div class="well">
+    <div>
+        @Html.LabelFor(m => m.Manifacturer)
+        @Html.DisplayFor(m => m.Manifacturer)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Model)
+        @Html.DisplayFor(m => m.Model)  
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Price)
+        @Html.DisplayFor(m => m.Price)
+    </div>
+    <div class="text-center">
+        <img src="@Model.Image" alt="@Model.Model" />
+    </div>
+</div>
+
+
+
