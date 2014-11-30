@@ -1,6 +1,7 @@
-'use strict';
+app.controller('ProfileCtrl',
+    function ProfileCtrl($scope, $route, $location, notifier, identity, auth, eventResource) {
+        'use strict';
 
-app.controller('ProfileCtrl', function ProfileCtrl($scope, $route, $location, notifier, identity, auth, eventResource) {
         $scope.user = {
             firstName: identity.currentUser.firstName,
             lastName: identity.currentUser.lastName,
@@ -12,31 +13,42 @@ app.controller('ProfileCtrl', function ProfileCtrl($scope, $route, $location, no
             google: identity.currentUser.google
         };
 
-        eventResource.getUserEvents().$promise.then(function (data) {
-            $scope.myEvents = data;
-        }, function (err) {
-            notifier.error(err.data);
-        });
+        eventResource
+            .getUserEvents()
+            .$promise
+            .then(function (data) {
+                $scope.myEvents = data;
+            }, function (err) {
+                notifier.error(err.data);
+            });
 
-        eventResource.getJoinedEvents().$promise.then(function (data) {
-            $scope.joinedEvents = data;
-        }, function (err) {
-            notifier.error(err.data);
-        });
+        eventResource
+            .getJoinedEvents()
+            .$promise
+            .then(function (data) {
+                $scope.joinedEvents = data;
+            }, function (err) {
+                notifier.error(err.data);
+            });
 
-        eventResource.getPassedEvents().$promise.then(function (data) {
-            $scope.passedEvents = data;
-        }, function (err) {
-            notifier.error(err.data);
-        });
+        eventResource
+            .getPassedEvents()
+            .$promise
+            .then(function (data) {
+                $scope.passedEvents = data;
+            }, function (err) {
+                notifier.error(err.data);
+            });
 
         $scope.update = function(user) {
-            auth.update(user).then(function() {
-                $scope.firstName = user.firstName;
-                $scope.lastName = user.lastName;
-                notifier.success('Update successful!');
-                $location.path('/');
-            });
+            auth
+                .update(user)
+                .then(function() {
+                    $scope.firstName = user.firstName;
+                    $scope.lastName = user.lastName;
+                    notifier.success('Update successful!');
+                    $location.path('/');
+                });
         };
     });
 

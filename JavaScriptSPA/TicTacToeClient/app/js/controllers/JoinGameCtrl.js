@@ -1,5 +1,4 @@
-'use strict';
-
-ticTacToeApp.controller('JoinGameCtrl', function JoinGameCtrl($scope, game) {
-
+ticTacToeApp.controller('JoinGameCtrl',
+	function JoinGameCtrl($scope, game) {
+		'use strict';
 });

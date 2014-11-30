@@ -1,7 +1,6 @@
 (function () {
   require(['courses/course', 'courses/student'],
     function (Course, Student) {
-
       var jsOopCourseTotalScoreFormula = function (student) {
         return 65 * student.exam / 100 +
           15 * student.homework / 5 +
@@ -12,7 +11,6 @@
 
       var jsOopCourse = new Course('JavaScript OOP', jsOopCourseTotalScoreFormula);
 
-      //add students like this
       for (var i = 0; i < 30; i += 1) {
         var student = new Student({
           name: 'Peter Petrov',

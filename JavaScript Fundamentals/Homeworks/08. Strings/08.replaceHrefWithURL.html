@@ -35,7 +35,6 @@
         */
 
         function replaceHref(websiteContent) {
-            // we're using Replace method for strings with text to replace and replacing text
             var output = String(websiteContent).replace(/(\<a href=\")/g, '[URL=');
             output = String(output).replace(/(">)/g, ']');
             output = String(output).replace(/(\<\/a>)/g, '[/URL]');    

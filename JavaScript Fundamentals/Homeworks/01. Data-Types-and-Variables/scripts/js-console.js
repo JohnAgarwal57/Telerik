@@ -1,31 +1,31 @@
 (function () {
 	function createJsConsole(selector) {
-		var self = this;
-		var consoleElement = document.querySelector(selector);
+		var _this = this,
+			consoleElement = document.querySelector(selector),
+			textArea = document.createElement("p");
 
 		if (consoleElement.className) {
-			consoleElement.className = consoleElement.className + " js-console";
+			consoleElement.className = consoleElement.className + ' js-console';
 		}
 		else {
 			consoleElement.className = "js-console";
 		}
 
-		var textArea = document.createElement("p");
 		consoleElement.appendChild(textArea);
 
-		self.write = function jsConsoleWrite(text) {
-			var textLine = document.createElement("span");
+		_this.write = function jsConsoleWrite(text) {
+			var textLine = document.createElement('span');
 			textLine.innerHTML = text;
 			textArea.appendChild(textLine);
 			consoleElement.scrollTop = consoleElement.scrollHeight;
-		}
+		};
 
-		self.writeLine = function jsConsoleWriteLine(text) {
-			self.write(text);
-			textArea.appendChild(document.createElement("br"));
-		}
+		_this.writeLine = function jsConsoleWriteLine(text) {
+			_this.write(text);
+			textArea.appendChild(document.createElement('br'));
+		};
 
-		self.read = function readText(inputSelector) {
+		_this.read = function readText(inputSelector) {
 			var element = document.querySelector(inputSelector);
 			if (element.innerHTML) {
 				return element.innerHTML;
@@ -33,19 +33,19 @@
 			else {
 				return element.value;
 			}
-		}
+		};
 
-		self.readInteger = function readInteger(inputSelector) {
-			var text = self.read(inputSelector);
-			return parseInt(text);
-		}
+		_this.readInteger = function readInteger(inputSelector) {
+			var text = _this.read(inputSelector);
+			return parseInt(text, 10);
+		};
 
-		self.readFloat = function readFloat(inputSelector) {
-			var text = self.read(inputSelector);
+		_this.readFloat = function readFloat(inputSelector) {
+			var text = _this.read(inputSelector);
 			return parseFloat(text);
-		}
+		};
 
-		return self;
+		return _this;
 	}
-	jsConsole = new createJsConsole("#js-console");
+	jsConsole = new createJsConsole('#js-console');
 }).call(this);

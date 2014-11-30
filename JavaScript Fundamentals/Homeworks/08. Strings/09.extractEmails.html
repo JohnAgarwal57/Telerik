@@ -31,13 +31,10 @@
 
         function extractEmails(someString) {
             var emails = someString.replace(/(,)/g, ' ').replace(/(!)/g, ' ').replace(/(\?)/g, ' ').replace(/(-)/g, ' ').replace(/(=)/g, ' ').replace(/(:)/g, ' ').replace(/(;)/g, ' ').split(' '),
-                index = 1,
-                i;
+                index = 1;
 
-            // then we loop
-            for (i = 0; i < emails.length; i++) {
+            for (var i = 0; i < emails.length; i++) {
                 if (validateEmail(emails[i])) {
-                    // then we check if it's email to be email it has to have 2 to 50 chars then @ then 2 to 20 chars then . and then 2 to 6 chars, if so - print
                     jsConsole.writeLine(String.format("Email[{0}] - {1}", index, emails[i])); 
                     index++;
                 }    

@@ -1,29 +1,31 @@
-var User = require('mongoose').model('User');
-var Message = require('mongoose').model('Message');
+var User = require('mongoose').model('User'),
+    Message = require('mongoose').model('Message');
 
 module.exports = {
-    sendMessage: function (message) {
+    sendMessage: function send(message) {
         var from;
         var to;
-        User.find({userName: message.from}).exec(function (err, result) {
-            if (err) {
-                return res.status(404).send('Cannot find the user: ' + err);
-            }
-            from = result[0];
-            User.find({userName: message.to}).exec(function (err, result) {
+        User
+            .find({userName: message.from})
+            .exec(function (err, result) {
                 if (err) {
                     return res.status(404).send('Cannot find the user: ' + err);
                 }
-                to = result[0];
-                Message.create({
-                    from: from,
-                    to: to,
-                    text: message.text
+                from = result[0];
+                User.find({userName: message.to}).exec(function (err, result) {
+                    if (err) {
+                        return res.status(404).send('Cannot find the user: ' + err);
+                    }
+                    to = result[0];
+                    Message.create({
+                        from: from,
+                        to: to,
+                        text: message.text
+                    });
                 });
             });
-        });
     },
-    getMessages: function (users, callback) {
+    getMessages: function get(users, callback) {
         var from;
         var to;
         User

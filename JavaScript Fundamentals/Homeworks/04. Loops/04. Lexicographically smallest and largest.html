@@ -17,11 +17,11 @@
 	<script>
 		// Task 4: Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects
 
-        function smallestAndLargest(){
+        function smallestAndLargest() {
             var smallest = null,
                 largest= null;
 
-            for(var prop in document){
+            for(var prop in document) {
                 if (smallest == null || prop < smallest) smallest = prop;
                 if (largest == null || prop > largest) largest = prop;                
             }
@@ -32,9 +32,13 @@
             smallest = null;
             largest = null;
 
-            for(var prop in window){
-                if (smallest == null || prop < smallest) smallest = prop;
-                if (largest == null || prop > largest) largest = prop;                
+            for(var prop in window) {
+                if (smallest == null || prop < smallest) {
+                    smallest = prop;
+                }
+                if (largest == null || prop > largest) {
+                    largest = prop;      
+                }          
             }
 
             jsConsole.writeLine('The smallest element(lexicographically) in window is ' + smallest);
@@ -43,9 +47,13 @@
             smallest = null;
             largest = null;
 
-            for(var prop in navigator){
-                if (smallest == null || prop < smallest) smallest = prop;
-                if (largest == null || prop > largest) largest = prop;                
+            for(var prop in navigator) {
+                if (smallest == null || prop < smallest) {
+                    smallest = prop;
+                }
+                if (largest == null || prop > largest) {
+                    largest = prop;        
+                }        
             }
 
             jsConsole.writeLine('The smallest element(lexicographically) in navigator is ' + smallest);

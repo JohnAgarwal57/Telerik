@@ -1,12 +1,12 @@
-'use strict';
-
 app.factory('trips', ['$http', '$q', '$location', 'identity', 'authorization', 'baseServiceUrl',
     function($http, $q, $location, identity, authorization, baseServiceUrl) {
-        var tripsApi = baseServiceUrl + '/api/Trips';
+        'use strict';
+
+        var tripsApi = baseServiceUrl + '/api/Trips',
+            deferred = $q.defer();
 
         return {
-            createTrip: function (trip) {
-                var deferred = $q.defer();
+            createTrip: function createTrip(trip) {
                 var headers = authorization.getAuthorizationHeader();
 
                 $http.post(tripsApi, trip, { headers: headers })
@@ -19,8 +19,7 @@ app.factory('trips', ['$http', '$q', '$location', 'identity', 'authorization', '
 
                 return deferred.promise;
             },
-            getTrips: function (options) {
-                var deferred = $q.defer();
+            getTrips: function getTrips(options) {
                 var url = tripsApi;
 
                 if (options) {
@@ -76,8 +75,7 @@ app.factory('trips', ['$http', '$q', '$location', 'identity', 'authorization', '
 
                 return deferred.promise;
             },
-            getTrip: function (id) {
-                var deferred = $q.defer();
+            getTrip: function getTrip(id) {
                 var headers = authorization.getAuthorizationHeader();
 
                 $http.get(tripsApi + '/' + id,
@@ -102,8 +100,7 @@ app.factory('trips', ['$http', '$q', '$location', 'identity', 'authorization', '
 
                 return deferred.promise;
             },
-            joinTrip: function (id) {
-                var deferred = $q.defer();
+            joinTrip: function joinTrip(id) {
                 var headers = authorization.getAuthorizationHeader();
 
                 $http.put(tripsApi + '/' + id, {}, { headers: headers })
@@ -116,5 +113,5 @@ app.factory('trips', ['$http', '$q', '$location', 'identity', 'authorization', '
 
                 return deferred.promise;
             }
-        }
+        };
     }]);

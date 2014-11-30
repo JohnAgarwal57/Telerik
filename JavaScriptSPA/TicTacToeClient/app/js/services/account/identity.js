@@ -1,11 +1,11 @@
-'use strict';
-
 ticTacToeApp.factory('identity', ['$cookieStore', function($cookieStore) {
-    var cookieStorageUserKey = 'currentApplicationUser';
+    'use strict';
 
-    var currentUser;
+    var cookieStorageUserKey = 'currentApplicationUser',
+        currentUser;
+
     return {
-        getCurrentUser: function() {
+        getCurrentUser: function getCurrentUser() {
             var savedUser = $cookieStore.get(cookieStorageUserKey);
             if (savedUser) {
                 return savedUser;
@@ -13,7 +13,7 @@ ticTacToeApp.factory('identity', ['$cookieStore', function($cookieStore) {
 
             return currentUser;
         },
-        setCurrentUser: function(user) {
+        setCurrentUser: function setCurrentUser(user) {
             if (user) {
                 $cookieStore.put(cookieStorageUserKey, user);
             }
@@ -23,8 +23,8 @@ ticTacToeApp.factory('identity', ['$cookieStore', function($cookieStore) {
 
             currentUser = user;
         },
-        isAuthenticated: function() {
+        isAuthenticated: function isAuthenticated() {
             return !!this.getCurrentUser();
         }
-    }
+    };
 }]);

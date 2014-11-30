@@ -1,7 +1,6 @@
 define(function() {
 	'use strict';
-	var Student;
-	Student = (function() {
+	var Student = (function() {
 		function Student(firstName, lastName, age, mark) {
 			if (validateData(firstName, "string")) {
 				this._firstName = firstName;

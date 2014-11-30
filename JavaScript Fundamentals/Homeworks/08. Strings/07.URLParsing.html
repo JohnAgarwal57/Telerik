@@ -43,34 +43,28 @@
             var protocolText = '',
                 serverText = '',
                 resourceText = '',
-                index = 0;
+                index = 0,
+                parsedURL;
 
-            // we search for : 
             index = URL.indexOf(":");
 
-            // and we get everything before that
             protocolText = URL.substr(0, index);
-
-            // then we get all after : with index + 3 becouse we need to jump after :// 
             serverText = URL.substr(index + 3);
             
-            // in this substring we search for first /
             index = serverText.indexOf("/");
             
-            // everything after it is the resourc
             resourceText = serverText.substr(index);
 
-            // and everything before is the server
             serverText = serverText.substr(0, index);
 
-            var  parsedURL = {
-                    URLprotocol : protocolText,
-                    URLserver : serverText,
-                    URLresource : resourceText,
-                    toString: function personToString() {
-                        return "protocol: " + this.URLprotocol + ", server: " + this.URLserver + ", resourse: "  + this.URLresource;
-                    }
+            parsedURL = {
+                URLprotocol : protocolText,
+                URLserver : serverText,
+                URLresource : resourceText,
+                toString: function personToString() {
+                    return "protocol: " + this.URLprotocol + ", server: " + this.URLserver + ", resourse: "  + this.URLresource;
                 }
+            }
           
             jsConsole.writeLine(parsedURL);
         }

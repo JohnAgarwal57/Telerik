@@ -1,39 +1,14 @@
-<div id="getposts-page" class="getpost-page"> 
+<div id="getposts-page" class="getpost-page">
     <div>
-        <label>Search by user:</label>
-        <input type="text" id="search-user" class="text-box">
-        <label>Search by title/body:</label>
-        <input type="text" id="search-title-body" class="text-box">   
-        <label>Number of posts:</label>
-        <input type="text" id="posts-count" class="text-box" placeholder = "Must be set before first search!">     
-        <button id="getmessages-button" class="button">Show messages</button>
-    </div> 
-    <table id = "posts-containter" class = 'posts-containter'></table>
-
-    <script id="posts-template" type="text/x-handlebars-template">
-        <table class="posts-list">
-            <tr class = "header-row">
-                <th>Posted by</th>
-                <th>Date</th>
-                <th>Title</th>
-                <th>Body</th>
-            </tr>       
-            {{#each posts}}  
-            <tr class = "posts-item">
-                <td>
-                    {{user.username}}
-                </td>
-                <td>
-                    {{postDate}}
-                </td>
-                <td>
-                    {{title}}
-                </td>
-                 <td>
-                    {{body}}
-                </td>                             
-            </tr>
-            {{/each}}           
-        </table>
-    </script>
+        <form>
+            <label>Search by user:</label>
+            <input type="text" id="search-user" class="text-box">
+            <label>Search by title/body:</label>
+            <input type="text" id="search-title-body" class="text-box">
+            <label>Number of posts:</label>
+            <input type="text" id="posts-count" class="text-box" placeholder="10 is default">
+            <button id="getmessages-button" class="button">Show messages</button>
+        </form>
+    </div>
+    <div id="grid"></div>
 </div>

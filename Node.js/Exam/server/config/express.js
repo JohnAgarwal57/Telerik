@@ -4,7 +4,7 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     passport = require('passport');
-    busboy = require('connect-busboy'),
+    busboy = require('connect-busboy');
 
 module.exports = function(app, config) {
     app.set('view engine', 'jade');
@@ -15,8 +15,14 @@ module.exports = function(app, config) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-    app.use(busboy({immediate: false}));
-    app.use(session({secret: '<mysecret>', saveUninitialized: true, resave: true}));
+    app.use(busboy({
+        immediate: false
+    }));
+    app.use(session({
+        secret: '<mysecret>',
+        saveUninitialized: true,
+        resave: true
+    }));
     app.use(stylus.middleware(
         {
             src: config.rootPath + '/public',

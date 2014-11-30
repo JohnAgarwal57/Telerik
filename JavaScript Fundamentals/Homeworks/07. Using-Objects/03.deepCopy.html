@@ -23,10 +23,9 @@
         */
 
         function deepCopy(sourceObj, destinationObj) {
-            var destinationObj = destinationObj || {},
-                i;
+            var destinationObj = destinationObj || {};
 
-            for (i in sourceObj) {
+            for (var i in sourceObj) {
               if (typeof sourceObj[i] === 'object') {
                 destinationObj[i] = (sourceObj[i].constructor === Array)?[]:{};
                 deepCopy(sourceObj[i], destinationObj[i]);
@@ -39,11 +38,10 @@
 
         function Clone() {
             var source = {
-                name: 'Jon Snow',
-                hobbies: ['killing', 'fighting']
-            };
-
-            var destination = deepCopy(source);
+                    name: 'Jon Snow',
+                    hobbies: ['killing', 'fighting']
+                },
+                destination = deepCopy(source);
 
             jsConsole.writeLine('The source name is :' + source.name);
             jsConsole.writeLine('The destination name is :' + destination.name);

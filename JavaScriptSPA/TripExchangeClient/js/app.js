@@ -1,7 +1,7 @@
-'use strict';
-
 var app = angular.module('app', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap']).
     config(['$routeProvider', function($routeProvider) {
+        'use strict';
+        
         $routeProvider
             .when('/', {
                 templateUrl: 'views/partials/home.html',
@@ -41,5 +41,5 @@ var app = angular.module('app', ['ngRoute', 'ngResource', 'ngCookies', 'ui.boots
             .otherwise({redirectTo: '/'});
     }])
     .value('toastr', toastr)
-    //.constant('baseServiceUrl', 'http://localhost:1337');
-    .constant('baseServiceUrl', 'http://spa2014.bgcoder.com/');
+    .constant('baseServiceUrl', 'http://localhost:1337');
+    //.constant('baseServiceUrl', 'http://spa2014.bgcoder.com/');

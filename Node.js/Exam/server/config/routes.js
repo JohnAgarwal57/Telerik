@@ -21,7 +21,7 @@ module.exports = function(app) {
     app.get('/api/pass-events/:username', auth.isAuthenticated, controllers.events.getPassedUserEvents);
 
     app.get('/partials/:partialArea/:partialName', function(req, res) {
-        res.render('../../public/app/views/' + req.params.partialArea + '/' + req.params.partialName)
+        res.render('../../public/app/views/' + req.params.partialArea + '/' + req.params.partialName);
     });
 
     app.post('/login', auth.login);

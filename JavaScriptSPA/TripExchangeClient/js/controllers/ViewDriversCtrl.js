@@ -1,7 +1,7 @@
-'use strict';
-
 app.controller('ViewDriversCtrl', ['$rootScope', '$scope', '$location', 'drivers', 'notifier', 'identity',
     function ViewDriversCtrl($rootScope, $scope, $location, drivers, notifier, identity) {
+        'use strict';
+
         (function getDrivers() {
             drivers
                 .getDrivers()
@@ -59,7 +59,7 @@ app.controller('ViewDriversCtrl', ['$rootScope', '$scope', '$location', 'drivers
                     }, function (err) {
                         notifier.error(err.message);
                         $location.path('/unauthorized');
-                    })
+                    });
             }
-        }
+        };
     }]);

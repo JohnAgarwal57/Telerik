@@ -1,27 +1,21 @@
 function solve(args) {
-	//var numbers = [];
-	//for (var i = 1; i < args.length; i++) {
-	//	numbers.push(parseInt(args[i]));
-	//}
-
 	var numbers = args.slice(1).map(Number),
-	sum = numbers[0],
-	currentSum = numbers[0];
+		sum = numbers[0],
+		currentSum = numbers[0];
 
-    for (var i = 1; i < numbers.length; i++) {
-        if (numbers[i] + currentSum >= numbers[i]) {
-            currentSum = numbers[i] + currentSum;
-        }
-        else {
-            currentSum = numbers[i];
-        }
-       
-        if (currentSum > sum) {
-            sum = currentSum;
-        }
-    }
+	for (var i = 1; i < numbers.length; i++) {
+		if (numbers[i] + currentSum >= numbers[i]) {
+			currentSum = numbers[i] + currentSum;
+		} else {
+			currentSum = numbers[i];
+		}
 
-    return(sum);
+		if (currentSum > sum) {
+			sum = currentSum;
+		}
+	}
+
+	return(sum);
 }
 
 var test1 = [

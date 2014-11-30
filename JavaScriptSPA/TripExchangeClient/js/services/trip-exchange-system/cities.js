@@ -1,13 +1,12 @@
-'use strict';
-
 app.factory('cities', ['$http', '$q', 'baseServiceUrl',
     function($http, $q, baseServiceUrl) {
-        var citiesApi = baseServiceUrl + '/api/Cities';
+        'use strict';
+
+        var citiesApi = baseServiceUrl + '/api/Cities',
+            deferred = $q.defer();
 
         return {
-            getCities: function () {
-                var deferred = $q.defer();
-
+            getCities: function getCities() {
                 $http.get(citiesApi)
                     .success(function (data) {
                         deferred.resolve(data);
@@ -18,5 +17,5 @@ app.factory('cities', ['$http', '$q', 'baseServiceUrl',
 
                 return deferred.promise;
             }
-        }
+        };
     }]);

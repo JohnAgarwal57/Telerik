@@ -11,18 +11,13 @@
 	<script>
 		// Task 6 : Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
 
-        // I'm gonna do it for any radius, not just 5.
         var r = 5,
             x = 3.2,
             y = 3.6;
 
-        // We must check if x*x + y*y < r*r, and if so, the point is IN the circle
-        if ((Math.pow(x, 2) + Math.pow(y, 2)) > Math.pow(r, 2))
-		{
+        if ((Math.pow(x, 2) + Math.pow(y, 2)) > Math.pow(r, 2)) {
             jsConsole.writeLine("The point isn't in the circle.");  
-        }
-        else
-        {
+        } else {
             jsConsole.writeLine("The point is in the circle.");
         }
 	</script>

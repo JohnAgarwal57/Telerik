@@ -21,11 +21,10 @@
 	<script>
 		// Task 1 : Write a script that allocates numbersay of 20(I'll do it with N) integers and initializes each element by its index multiplied by 5. Print the obtained numbersay on the console.
 
-        function printNumberSet(n){
-		    var i,
-                numbers = [];
+        function printNumberSet(n) {
+		    var numbers = [];
 
-            for (i = 0; i < n; i+=1) {
+            for (var i = 0; i < n; i+= 1) {
                 numbers[i] = i * 5;
                 jsConsole.writeLine(numbers[i]);
             };

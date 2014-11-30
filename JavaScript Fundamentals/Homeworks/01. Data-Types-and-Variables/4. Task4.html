@@ -2,20 +2,21 @@
 
 <head>
 	<title>Data types and variables - Integer types</title>
-	<link href="styles/js-console.css" rel="stylesheet" />
+	<link href='styles/js-console.css' rel='stylesheet' />
 </head>
 
 <body>
-	<div id="js-console"></div>				 
-	<script src="scripts/js-console.js"></script>
+	<div id='js-console'></div>				 
+	<script src='scripts/js-console.js'></script>
 	<script>
 		// Task 4 : Create null, undefined variables and try typeof on them.
 
-		var undefinedValue = undefined;
-		jsConsole.writeLine("undefinedValue = " + undefinedValue + ", typeof(undefinedValue) = " + typeof(undefinedValue));
+		var undefinedValue = undefined,
+			nullValue = null;
 		
-		var nullValue = null;
-		jsConsole.writeLine("nullValue = " + nullValue + ", typeof(nullValue) = " + typeof(nullValue));	
+		jsConsole.writeLine('undefinedValue = ' + undefinedValue + ', typeof(undefinedValue) = ' + typeof(undefinedValue));
+		
+		jsConsole.writeLine('nullValue = ' + nullValue + ', typeof(nullValue) = ' + typeof(nullValue));	
 	</script>
 </body>
 

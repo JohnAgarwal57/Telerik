@@ -1,9 +1,8 @@
-'use strict';
-
 ticTacToeApp.controller('GameStatusCtrl',
     function GameStatusCtrl($rootScope, $scope, $location, $routeParams, game, auth, identity, notifier) {
+        'use strict';
 
-        var token = identity.getCurrentUser()['access_token']
+        var token = identity.getCurrentUser()['access_token'];
 
         if (!auth.isAuthenticated()) {
             $location.path('/login');
@@ -34,13 +33,14 @@ ticTacToeApp.controller('GameStatusCtrl',
                         $scope.cursorClass = 'allowed';
 
                         $scope.hasTwoPlayers = data.FirstPlayerName && data.SecondPlayerName;
+
                         if ($scope.hasTwoPlayers) {
                             $scope.currentPlayer = identity.getCurrentUser()['userName'];
                             $scope.firstPlayer = data.FirstPlayerName;
                             $scope.secondPlayer = data.SecondPlayerName;
                         }
 
-                        if ($scope.gameStatus == 'WonByX') {
+                        if ($scope.gameStatus === 'WonByX') {
                             if ($scope.currentPlayer == $scope.firstPlayer) {
                                 notifier.success('You won!');
                             } else {
@@ -48,7 +48,7 @@ ticTacToeApp.controller('GameStatusCtrl',
                             }
                         }
 
-                        if ($scope.gameStatus == 'WonByY') {
+                        if ($scope.gameStatus === 'WonByY') {
                             if ($scope.currentPlayer == $scope.firstPlayer) {
                                 notifier.success('You lost!');
                             } else {
@@ -56,12 +56,12 @@ ticTacToeApp.controller('GameStatusCtrl',
                             }
                         }
 
-                        if ($scope.gameStatus == 'Draw') {
+                        if ($scope.gameStatus === 'Draw') {
                             notifier.success('Draw!');
                         }
 
-                        if (data.FirstPlayerName === $rootScope.username && data.State == 2 ||
-                            data.FirstPlayerName !== $rootScope.username && data.State == 1) {
+                        if (data.FirstPlayerName === $rootScope.username && data.State === 2 ||
+                            data.FirstPlayerName !== $rootScope.username && data.State === 1) {
                             $scope.cursorClass = 'notAllowed';
                         }
 
@@ -88,6 +88,6 @@ ticTacToeApp.controller('GameStatusCtrl',
                         notifier.error(e.Message);
                     });
             }
-        }
+        };
     }
 );

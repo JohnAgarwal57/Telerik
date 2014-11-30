@@ -9,10 +9,10 @@
 			cryptojs: 'libs/cryptojs',
 			sha1: 'libs/sha1',
 			underscore: 'libs/underscore',
-			httpRequest : "crowdChat/httpRequest",
-			logic: "crowdChat/logic",
-			ui: "crowdChat/ui",
-			events: "crowdChat/events"
+			httpRequest : "crowdShare/httpRequest",
+			logic: "crowdShare/logic",
+			ui: "crowdShare/ui",
+			events: "crowdShare/events"
 		}
 	});
 

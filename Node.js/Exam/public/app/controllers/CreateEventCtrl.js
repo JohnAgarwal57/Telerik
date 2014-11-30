@@ -1,7 +1,6 @@
-'use strict';
-
 app.controller('CreateEventCtrl', ['$scope', '$location', 'notifier', 'identity', 'auth', 'eventResource',
     function ($scope, $location, notifier, identity, auth, eventResource) {
+        'use strict';
 
         $scope.initiatives = ['Software Academy', 'Algo Academy', 'School Academy', 'Kids Academy'];
         $scope.seasons = ['Started 2010', 'Started 2011', 'Started 2012', 'Started 2013'];
@@ -14,12 +13,15 @@ app.controller('CreateEventCtrl', ['$scope', '$location', 'notifier', 'identity'
                     $scope.event.creatorPhone = identity.currentUser.phone;
                 }
 
-                eventResource.add(event).$promise.then(function () {
-                    notifier.success("Event created");
-                    $location.path('/');
-                }, function (err) {
-                    notifier.error(err.data);
-                });
+                eventResource
+                    .add(event)
+                    .$promise
+                    .then(function () {
+                        notifier.success("Event created");
+                        $location.path('/');
+                    }, function (err) {
+                        notifier.error(err.data);
+                    });
             }
         };
     }]);

@@ -58,13 +58,13 @@
                     var unique = false; 
 
                     for (var j = 0; j < i; j++) {
-                        if (persons[i].fname == persons[j].fname) {
+                        if (persons[i].fname === persons[j].fname) {
                             unique = true;
                             break; 
                         }
                     }
 
-                    if (unique == false) { 
+                    if (!unique) { 
                         uniqueFName.push(persons[i]);
                     }
                 }
@@ -74,7 +74,7 @@
                     var groupByFname = [];
 
                     for (j = 0; j < persons.length; j++) {
-                        if (uniqueFName[i].fname == persons[j].fname) {
+                        if (uniqueFName[i].fname === persons[j].fname) {
                             groupByFname.push(persons[j]);
                         }
                     }
@@ -95,13 +95,13 @@
                     unique = false; 
 
                     for (var j = 0; j < i; j++) {
-                        if (persons[i].lname == persons[j].lname) {
+                        if (persons[i].lname === persons[j].lname) {
                             unique = true;
                             break; 
                         }
                     }
 
-                    if (unique == false) { 
+                    if (!unique) { 
                         uniqueLName.push(persons[i]);
                     }
                 }
@@ -110,7 +110,7 @@
                     groupByLName = [];
 
                     for (var j = 0; j < persons.length; j++) {
-                        if (uniqueLName[i].lname == persons[j].lname) {
+                        if (uniqueLName[i].lname === persons[j].lname) {
                             groupByLName.push(persons[j]);
                         }
                     }
@@ -130,13 +130,13 @@
                     unique = false; 
 
                     for (j = 0; j < i; j++) {
-                        if (persons[i].age == persons[j].age) {
+                        if (persons[i].age === persons[j].age) {
                             unique = true;
                             break; 
                         }
                     }
 
-                    if (unique == false) { 
+                    if (!unique) { 
                         uniqueAges.push(persons[i]);
                     }
                 }
@@ -145,7 +145,7 @@
                     groupByAge = [];
 
                     for (j = 0; j < persons.length; j++) {
-                        if (uniqueAges[i].age == persons[j].age) {
+                        if (uniqueAges[i].age === persons[j].age) {
                             groupByAge.push(persons[j]);
                         }
                     }

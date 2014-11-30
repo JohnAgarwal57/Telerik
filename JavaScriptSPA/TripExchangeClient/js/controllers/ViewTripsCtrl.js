@@ -1,7 +1,7 @@
-'use strict';
-
 app.controller('ViewTripsCtrl', ['$rootScope', '$scope', '$location', 'trips', 'notifier', 'identity', 'cities',
     function ViewTripsCtrl($rootScope, $scope, $location, trips, notifier, identity, cities) {
+        'use strict';
+
         (function getTrips() {
             trips
                 .getTrips()
@@ -75,7 +75,7 @@ app.controller('ViewTripsCtrl', ['$rootScope', '$scope', '$location', 'trips', '
                     }, function (err) {
                         notifier.error(err.message);
                         $location.path('/unauthorized');
-                    })
+                    });
             }
-        }
+        };
     }]);

@@ -14,22 +14,15 @@
 		var number = 101,
 			isPrime = true;
 
-        // Make a loop from number 2 to the sqrt of the number - if we can't find a number to be devided to the sqrt we won't find it at all :)
-        for (var i = 2; i <= Math.round(Math.sqrt(number)); i++)
-        {
-            if ((number % i) == 0)
-	        {
+        for (var i = 2; i <= Math.round(Math.sqrt(number)); i++) {
+            if ((number % i) == 0) {
 		        isPrime = false;    
 	        }   
         }
 
-        // if isPrime is still true - the number is prime
-        if (isPrime)
-	    {
+        if (isPrime) {
            jsConsole.writeLine("The number " + number + " is prime number."); 
-	    }
-        else
-        {
+	    } else {
             jsConsole.writeLine("The number " + number + " isn't prime number.");
         }
 	</script>

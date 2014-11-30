@@ -7,7 +7,7 @@ define(function() {
         return {
           content : content,
         };
-      }
+      };
     }
 	
     return Item;

@@ -2,57 +2,56 @@
 
 <head>
 	<title>Data types and variables - Integer types</title>
-	<link href="styles/js-console.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href='styles/js-console.css' rel='stylesheet' />
+    <link rel='stylesheet' type='text/css' href='styles/styles.css'>
 </head>
 
 <body>
     <h1> 
-        Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+        Write a function that returns the last digit of given integer as an English word. Examples: 512  'two', 1024  'four', 12309  'nine'
     </h1>
     <div>
-        <label for = "number">Input N:</label>
-        <input type = "text" id = "number" name = "number"> 
-        <button onclick="returnLastDigitAsEnglishWord(document.getElementById('number').value)">Click</button>   
+        <label for = 'number'>Input N:</label>
+        <input type = 'text' id = 'number' name = 'number'> 
+        <button onclick='returnLastDigitAsEnglishWord(document.getElementById('number').value)'>Click</button>   
     </div>
 
-	<div id="js-console"></div>				 
-	<script src="scripts/js-console.js"></script>
+	<div id='js-console'></div>				 
+	<script src='scripts/js-console.js'></script>
 	<script>
-		// Task 1 : Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+		// Task 1 : Write a function that returns the last digit of given integer as an English word. Examples: 512  'two', 1024  'four', 12309  'nine'
 
         function returnLastDigitAsEnglishWord(number) {
 		    var lastDigit;
             
             lastDigit = number[number.length - 1];
-
             jsConsole.writeLine('Last digit is ' + returnWord(lastDigit));         
         }
 
         function returnWord(digit) {
             switch (parseInt(digit)) {   
                 case 1:
-                    return "one";
+                    return 'one';
                 case 2:
-                    return "two";
+                    return 'two';
                 case 3:
-                    return "three";
+                    return 'three';
                 case 4:
-                    return "four";
+                    return 'four';
                 case 5:
-                    return "five";
+                    return 'five';
                 case 6:
-                    return "six";
+                    return 'six';
                 case 7:
-                    return "seven";
+                    return 'seven';
                 case 8:
-                    return "eight";
+                    return 'eight';
                 case 9:
-                    return "nine";
+                    return 'nine';
                 case 0:
-                    return "zero";
+                    return 'zero';
                 default:
-                    return "Not a digit";
+                    return 'Not a digit';
             }
         }
 	</script>

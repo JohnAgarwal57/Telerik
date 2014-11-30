@@ -2,38 +2,39 @@
 
 <head>
 	<title>Data types and variables - Integer types</title>
-	<link href="styles/js-console.css" rel="stylesheet" />
+	<link href='styles/js-console.css' rel='stylesheet' />
 </head>
 
 <body>
-	<div id="js-console"></div>				 
-	<script src="scripts/js-console.js"></script>
+	<div id='js-console'></div>				 
+	<script src='scripts/js-console.js'></script>
 	<script>
 		// Task 3 : Try typeof on all variables you created.
 
+		var boolValue = true,
+			integerValue = 5,
+			stringValue = 'String value',
+			floatValue = 3.14,
+			arrayValue = ['French Roast', 'Colombian', 'Kona'],
+			objectValue = new Number(5);
+
 		// Boolean literals
-		var boolValue = true;
-		jsConsole.writeLine("boolValue = " + boolValue + ", typeof(boolValue) = " + typeof(boolValue));
+		jsConsole.writeLine('boolValue = ' + boolValue + ', typeof(boolValue) = ' + typeof(boolValue));
 
 		// Integer literals
-		var integerValue = 5;
-		jsConsole.writeLine("integerValue = " + integerValue + ", typeof(integerValue) = " + typeof(integerValue));
+		jsConsole.writeLine('integerValue = ' + integerValue + ', typeof(integerValue) = ' + typeof(integerValue));
 
 		// String literals
-		var stringValue = "String value";
-		jsConsole.writeLine("stringValue = " + stringValue + ", typeof(stringValue) = " + typeof(stringValue));
+		jsConsole.writeLine('stringValue = ' + stringValue + ', typeof(stringValue) = ' + typeof(stringValue));
 
 		// Float literals
-		var floatValue = 3.14;
-		jsConsole.writeLine("floatValue = " + floatValue + ", typeof(floatValue) = " + typeof(floatValue));
+		jsConsole.writeLine('floatValue = ' + floatValue + ', typeof(floatValue) = ' + typeof(floatValue));
 
 		// Array literals
-		var arrayValue = ["French Roast", "Colombian", "Kona"];
-		jsConsole.writeLine("arrayValue = " + arrayValue + ", typeof(arrayValue) = " + typeof(arrayValue));
+		jsConsole.writeLine('arrayValue = ' + arrayValue + ', typeof(arrayValue) = ' + typeof(arrayValue));
 
 		// Object literals
-		var objectValue = new Number(5);
-		jsConsole.writeLine("objectValue = " + objectValue + ", typeof(objectValue) = " + typeof(objectValue));
+		jsConsole.writeLine('objectValue = ' + objectValue + ', typeof(objectValue) = ' + typeof(objectValue));
 	</script>
 </body>
 

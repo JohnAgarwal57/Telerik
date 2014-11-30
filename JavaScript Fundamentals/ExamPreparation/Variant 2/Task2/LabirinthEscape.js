@@ -1,10 +1,10 @@
 function solve(args) {
 	var sizes = args[0].split(' '),
 		startPosition = args[1].split(' '),
-		rows = parseInt(sizes[0]),
-		cols = parseInt(sizes[1]),	
-		row = parseInt(startPosition[0]),
-		col = parseInt(startPosition[1]),
+		rows = parseInt(sizes[0], 10),
+		cols = parseInt(sizes[1], 10),
+		row = parseInt(startPosition[0], 10),
+		col = parseInt(startPosition[1], 10),
 		lab = args.slice(2),
 		visited = {},
 		sum = 0,
@@ -37,7 +37,6 @@ function solve(args) {
 	}
 
 	while(true) {
-
 		var cellValue = getValueAt(row, col, cols);
 
 		if(!inRange(row, rows) || !inRange(col, cols)) {
@@ -54,11 +53,10 @@ function solve(args) {
 
 		var dir = lab[row][col];
 		row += directions[dir].row;
-		col += directions[dir].col;	
+		col += directions[dir].col;
 	}
 
 	return(lab);
-
 }
 
 var test1 = [

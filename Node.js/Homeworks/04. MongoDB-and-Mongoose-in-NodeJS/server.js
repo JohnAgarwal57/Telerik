@@ -1,7 +1,7 @@
-var express = require('express');
-var app = express();
-
-var config = require('./server/config/config');
+var express = require('express'),
+	app = express(),
+	config = require('./server/config/config');
+	
 require('./server/config/mongoose')(config);
 
 app.listen(config.port);

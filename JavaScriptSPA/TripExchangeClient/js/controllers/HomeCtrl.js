@@ -1,7 +1,7 @@
-'use strict';
-
 app.controller('HomeCtrl',
     function HomeCtrl($scope, $routeParams, $location, drivers, identity, notifier, stats, trips) {
+        'use strict';
+        
         (function getStats() {
             stats
                 .getStats()

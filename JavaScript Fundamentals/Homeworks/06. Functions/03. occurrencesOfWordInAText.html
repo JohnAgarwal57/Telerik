@@ -32,16 +32,15 @@
 
         function findOccurrences(text, word, checked) {          
             var words = text.split(' '),
-                i,
                 count = 0;
 
-            if (!checked) { // Case insensitive
-                for (i = 0; i < words.length; i++) {
+            if (!checked) {
+                for (var i = 0; i < words.length; i++) {
                         if (words[i].toLowerCase() === word.toLowerCase()) {
                             count++;
                         };
                     };    
-            } else { // Case sensitive
+            } else {
                 for (i = 0; i < words.length; i++) {
                         if (words[i] === word) {
                             count++;

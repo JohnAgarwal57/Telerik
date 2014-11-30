@@ -1,4 +1,16 @@
 define(['jquery', 'logic'], function ($, logic) {
+	var postMessage = function() {
+		var username = localStorage.getItem("CrowdChatUserName");
+			
+		var	message = {
+				user : username,
+				text : $('#messageBox').val()
+			};
+		
+		logic.postMessage(message);
+		$('messageBox').val(' ');
+	};
+
 	$("a").on("click", function(){
 		$('.active').removeClass('active');
 		$(this).parent().addClass('active');
@@ -18,16 +30,4 @@ define(['jquery', 'logic'], function ($, logic) {
 			postMessage();
 		}
 	});
-
-	var postMessage = function() {
-		var username = localStorage.getItem("CrowdChatUserName");
-			
-		var	message = {
-				user : username,
-				text : $('#messageBox').val()
-			};
-		
-		logic.postMessage(message);
-		$('messageBox').val(' ');
-	};
 });

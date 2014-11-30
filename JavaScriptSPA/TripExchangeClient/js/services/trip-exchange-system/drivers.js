@@ -1,12 +1,12 @@
-'use strict';
-
 app.factory('drivers', ['$http', '$q', 'baseServiceUrl', 'authorization', 'identity',
     function($http, $q, baseServiceUrl, authorization, identity) {
-        var driversApi = baseServiceUrl + '/api/Drivers';
+        'use strict';
+
+        var driversApi = baseServiceUrl + '/api/Drivers',
+        deferred = $q.defer();
 
         return {
-            getDrivers: function (options) {
-                var deferred = $q.defer();
+            getDrivers: function getDrivers(options) {
                 var url = driversApi;
 
                 if (options) {
@@ -43,7 +43,7 @@ app.factory('drivers', ['$http', '$q', 'baseServiceUrl', 'authorization', 'ident
 
                 return deferred.promise;
             },
-            getDriver: function (id) {
+            getDriver: function getDriver(id) {
                 var deferred = $q.defer();
                 var headers = authorization.getAuthorizationHeader();
 
@@ -69,5 +69,5 @@ app.factory('drivers', ['$http', '$q', 'baseServiceUrl', 'authorization', 'ident
 
                 return deferred.promise;
             }
-        }
+        };
     }]);

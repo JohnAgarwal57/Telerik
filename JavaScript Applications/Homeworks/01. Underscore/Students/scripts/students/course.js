@@ -1,7 +1,6 @@
 define(['./student'],function (Student) {
 	'use strict';
-	var Course;
-	Course = (function() {
+	var Course = (function() {
 		function Course(name) {
 			if (validateData(name, "string") && (6 < name.length && name.length < 40)) {
 				this._name = name;

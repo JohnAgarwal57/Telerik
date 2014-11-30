@@ -29,10 +29,9 @@
 		// Task 5 : Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly
         function countNumbers(numbers, searchedNumber) {                     
             var arrayOfNumbers = numbers.split(','),
-                count = 0,
-                i;
+                count = 0;
 
-            for (i = 0; i < arrayOfNumbers.length; i++) {
+            for (var i = 0; i < arrayOfNumbers.length; i++) {
                 if (arrayOfNumbers[i] === searchedNumber) {
                     count++;
                 };

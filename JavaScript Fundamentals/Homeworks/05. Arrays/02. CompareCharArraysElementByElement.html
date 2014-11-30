@@ -26,18 +26,17 @@
         // Char arrays are strings so I'm getting two strings and comparing them:
         
         function compareArray(firstString, secondString){
-		    var i,
-                maxLength,
+		    var maxLength,
                 bigger = 0;
 
             if (firstString.length > secondString.length) {
                 maxLength = firstString.length;
             }
-            else{
+            else {
                 maxLength = secondString.length;
             }
 
-            for (i = 0; i < maxLength; i+=1) {
+            for (var i = 0; i < maxLength; i+= 1) {
                 if (firstString[i] > secondString[i]) {
                     bigger = 1;
                 }
@@ -51,7 +50,7 @@
             } else if (bigger === 2) {
                 jsConsole.writeLine('Second string is bigger');
             }
-            else{
+            else {
                 jsConsole.writeLine('Equal strings');
             }
         }

@@ -1,7 +1,6 @@
 define(['./animal'],function (Animal) {
 	'use strict';
-	var Animals;
-	Animals = (function() {
+	var Animals = (function() {
 		function Animals() {
 			this._animals = [];
 		}

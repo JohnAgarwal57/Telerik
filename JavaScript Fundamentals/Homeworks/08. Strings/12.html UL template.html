@@ -2,8 +2,8 @@
 
 <head>
     <title>Strings homework</title>
-	<link href="styles/js-console.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href='styles/js-console.css' rel='stylesheet' />
+    <link rel='stylesheet' type='text/css' href='styles/styles.css'>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         </h1>      
         <code>
             <ul>
-                <li>&lt;div data-type="template" id="list-item"></li>
+                <li>&lt;div data-type='template' id='list-item'></li>
                 <li>&lt;strong>-{name}-&lt;/strong> &lt;span>-{age}-&lt;/span></li>
                 <li>&lt;/div></li>
                 <li> &nbsp</li>
@@ -25,17 +25,17 @@
         </code>
     </header>
     <div>
-        <button onclick="ulCreator()">Click me</button> 
+        <button onclick='ulCreator()'>Click me</button> 
     </div>
 
-    <div data-type="template" id="list-item" hidden = "hidden" >
+    <div data-type='template' id='list-item' hidden = 'hidden' >
         <strong>-{name}-</strong> <span>-{age}-</span>
     </div>
 
-    <div id="display"></div>
+    <div id='display'></div>
 	<script>
 		/* Task 12. Write a function that creates a HTML UL using a template for every HTML LI. The source of the list should an array of elements. Replace all placeholders marked with –{…}–   with the value of the corresponding property of the object. Example: 
-        <div data-type="template" id="list-item">
+        <div data-type='template' id='list-item'>
             <strong>-{name}-</strong> <span>-{age}-</span>
         /div>
 
@@ -47,25 +47,24 @@
 
         function ulCreator() {
             var people = [
-                { name: "Peter", age: 14 },
-                { name: "Mike", age: 13 },
-                { name: "John", age: 22 },
-            ];
-            var template = document.getElementById("list-item").innerHTML.valueOf();
-            var peopleList = generateList(people, template);
-            document.getElementById("display").innerHTML = peopleList;
+                    { name: 'Peter', age: 14 },
+                    { name: 'Mike', age: 13 },
+                    { name: 'John', age: 22 },
+                ],
+                template = document.getElementById('list-item').innerHTML.valueOf(),
+                peopleList = generateList(people, template);
+            document.getElementById('display').innerHTML = peopleList;
         }
 
         function generateList(people, template) {
-            var i;
-            var list = "<ul>";
-            for (i = 0; i < people.length; i++) {
-                list += "<li>";
-                list += template.replace("-{name}-", people[i]["name"]);
-                list = list.replace("-{age}-", people[i]["age"]);
-                list += "</li>";
+            var list = '<ul>';
+            for (var i = 0; i < people.length; i++) {
+                list += '<li>';
+                list += template.replace('-{name}-', people[i]['name']);
+                list = list.replace('-{age}-', people[i]['age']);
+                list += '</li>';
             }
-            list += "</ul>";
+            list += '</ul>';
             return list;
         }
 	</script>

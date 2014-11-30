@@ -1,4 +1,4 @@
-function Solve(args) {
+function solve(args) {
 	var numbers = args.slice(1),
 		nonDecreasingSubsequences = 1;
 
@@ -7,8 +7,8 @@ function Solve(args) {
 	for (var i = 0; i < numbers.length - 1; i++) {
 		if (numbers[i + 1] < numbers[i]) {
 			nonDecreasingSubsequences++;
-		};
-	};
+		}
+	}
 
 	console.log(nonDecreasingSubsequences);
 }
@@ -22,7 +22,7 @@ var test1 = [
 	'4',
 	'0',
 	'1',
-]
+];
 
 var test2 = [
 	'6',
@@ -32,7 +32,7 @@ var test2 = [
 	'8',
 	'7',
 	'-6',
-]
+];
 
 var test3 = [
 '100',
@@ -136,8 +136,8 @@ var test3 = [
 '562202482',
 '-146496154',
 '1986578317',
-]
+];
 
-Solve(test1);
-Solve(test2);
-Solve(test3);
+solve(test1);
+solve(test2);
+solve(test3);

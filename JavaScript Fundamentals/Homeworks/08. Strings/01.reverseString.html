@@ -23,13 +23,11 @@
 		// Task 1. Write a JavaScript function reverses string and returns it. Example: "sample"  "elpmas".
 
         function reverseString(inputText) {
-            var reverseString = '',
-                i;
+            var reverseString = '';
 
             inputText = inputText || '';
 
-            for (i = 0; i < inputText.length; i++)
-            {
+            for (var i = 0; i < inputText.length; i++) {
                 reverseString = inputText[i] + reverseString;    
             }
 

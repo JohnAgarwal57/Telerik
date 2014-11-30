@@ -13,9 +13,9 @@ define(['./item'], function(Item) {
       this.add = function(item) {
         if (item instanceof Item) {
           items.push(item);
-        } 
+        }
         else {
-          throw new Error("Error");
+          throw new Error('Error');
         }
       };
 
@@ -26,11 +26,11 @@ define(['./item'], function(Item) {
         };
 
         for (var i = 0, len = items.length; i < len; i++) {
-          allData.items.push(items[i].getData())
+          allData.items.push(items[i].getData());
         }
 
         return allData;
-      }
+      };
     }
 
     return Section;

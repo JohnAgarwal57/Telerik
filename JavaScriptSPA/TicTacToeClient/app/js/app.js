@@ -1,5 +1,3 @@
-'use strict';
-
 var ticTacToeApp = angular.module('ticTacToeApp', ['ngRoute', 'ngResource', 'ngCookies']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -12,7 +10,7 @@ var ticTacToeApp = angular.module('ticTacToeApp', ['ngRoute', 'ngResource', 'ngC
             })
             .when('/register', {
                 templateUrl: 'views/partials/register.html',
-                controller: 'RegisterCtrl'
+                controller: 'SignUpCtrl'
             })
             .when('/join-game', {
                 templateUrl: 'views/partials/join-game.html',

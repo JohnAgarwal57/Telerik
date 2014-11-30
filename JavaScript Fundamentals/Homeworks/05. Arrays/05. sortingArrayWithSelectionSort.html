@@ -27,24 +27,20 @@
     
         function sortNumbers(sequence) {
             var numbers = sequence.split(","),
-                min, // variable holding the INDEX of min element
-                i,
-                j;
+                min;
 
-            for (i = 0; i < numbers.length-1; i++) {
-                min = i; //set the first as minimum
+            for (var i = 0; i < numbers.length-1; i++) {
+                min = i;
 
-                for (j = i + 1; j < numbers.length; j++) { //compare the not sorted part(first time it's all but first element - it's suppose to be the minumim)
-                    if (parseFloat(numbers[min]) > parseFloat(numbers[j])) { //check if really the first is minimum, if not min variable get the INDEX of those element which is smaller and so on till find small from 2 to last(3 to last, 4 to last....last-1 to last)                 
+                for (var j = i + 1; j < numbers.length; j++) {
+                    if (parseFloat(numbers[min]) > parseFloat(numbers[j])) {                 
                         min = j;    
                     }    
                 }
 
                 var oldValue = numbers[i];
-                numbers[i] = numbers[min]; //i element get the minimum from not sorted part
-                numbers[min] = oldValue; //the index where the minimum element from not sorted part was get's the i element from temp variable
-
-                //so on till the numbers is sorted....max easier with numbers.sort :)
+                numbers[i] = numbers[min]; 
+                numbers[min] = oldValue;
             }
 
             for (i = 0; i < numbers.length; i++) {

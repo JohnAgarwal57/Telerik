@@ -1,7 +1,7 @@
-'use strict';
-
 app.controller('TripDetailsCtrl',
     function TripDetailsCtrl($scope, $routeParams, $location, trips, identity, notifier) {
+        'use strict';
+
         (function getTrip() {
             if (identity.getCurrentUser() === undefined) {
                 notifier.error('Please login!');
@@ -30,7 +30,7 @@ app.controller('TripDetailsCtrl',
                     }, function (err) {
                         notifier.error(err.message);
                         $location.path('/unauthorized');
-                    })
+                    });
             }
         };
     });

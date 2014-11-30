@@ -35,7 +35,9 @@
             fname: fname, 
             lname: lname,
             age: age,
-            toString: function (){return 'Name : ' + this.fname + ' ' + this.lname + ', age : ' + this.age;}
+            toString: function () {
+                return 'Name : ' + this.fname + ' ' + this.lname + ', age : ' + this.age;
+            }
           }
         }
 
@@ -48,11 +50,10 @@
                     buildPerson('Pesho', 'Pesho', 56)
                 ],
                 youngestAge = 1000,
-                youngestPosition = -1,
-                i;
+                youngestPosition = -1;
 
             jsConsole.writeLine("The persons are :");
-            for (i = 0; i < persons.length; i++) {
+            for (var i = 0; i < persons.length; i++) {
                 jsConsole.writeLine(persons[i]);
             };
 

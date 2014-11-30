@@ -1,7 +1,6 @@
-'use strict';
-
 app.controller('DriverDetailsCtrl',
     function DriverDetailsCtrl($scope, $routeParams, $location, drivers, identity, notifier) {
+        'use strict';
 
         (function getDriver() {
             if (identity.getCurrentUser() === undefined) {
@@ -30,10 +29,10 @@ app.controller('DriverDetailsCtrl',
                     var allDrivers = $scope.driver.trips;
 
                     for (var i = 0; i < allDrivers.length; i++) {
-                        if (allDrivers[i].isMine == true) {
-                            result.push(allDrivers[i])
+                        if (allDrivers[i].isMine === true) {
+                            result.push(allDrivers[i]);
                         }
-                    };
+                    }
 
                     $scope.driver.trips = result;
                 } else
@@ -41,7 +40,7 @@ app.controller('DriverDetailsCtrl',
                     $scope.driver.trips= $scope.saveTrips;
                 }
             }
-        }
+        };
 
         $scope.selectOnlDrivers = function() {
             if (identity.getCurrentUser() === undefined) {
@@ -56,7 +55,7 @@ app.controller('DriverDetailsCtrl',
                         if (allDrivers[i].driverName == $scope.driver.name) {
                             result.push(allDrivers[i]);
                         }
-                    };
+                    }
 
                     $scope.driver.trips = result;
                 } else
@@ -64,5 +63,5 @@ app.controller('DriverDetailsCtrl',
                     $scope.driver.trips= $scope.saveTrips;
                 }
             }
-        }
+        };
     });

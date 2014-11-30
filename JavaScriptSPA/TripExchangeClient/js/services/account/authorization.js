@@ -1,11 +1,11 @@
-'use strict';
+ticTacToeApp.factory('authorization', ['identity', function(identity) {
+	'use strict';
 
-app.factory('authorization', ['identity', function(identity) {
     return {
-        getAuthorizationHeader: function() {
+        getAuthorizationHeader: function getAuthorizationHeader() {
             return {
                 'Authorization': 'Bearer ' + identity.getCurrentUser()['access_token']
-            }
+            };
         }
-    }
+    };
 }]);

@@ -29,15 +29,20 @@
 		// Task 10. Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
 
         function extractPalindromes(someString) {
-           // var words = someString.replace(/(,)/g, ' ').replace(/(!)/g, ' ').replace(/(\?)/g, ' ').replace(/(-)/g, ' ').replace(/(=)/g, ' ').replace(/(:)/g, ' ').replace(/(;)/g, ' ').replace(/(.)/g, ' ').split(' '),
-           //     index = 1,
-           //     i;
-            var words = someString.replace(/(,)/g, ' ').replace(/(!)/g, ' ').replace(/(\?)/g, ' ').replace(/(-)/g, ' ').replace(/(=)/g, ' ').replace(/(:)/g, ' ').replace(/(;)/g, ' ').replace(/(\/)/g, ' ').replace('.', ' ').split(' '),
-                index = 1,
-                i;
+            var words = someString
+                .replace(/(,)/g, ' ')
+                .replace(/(!)/g, ' ')
+                .replace(/(\?)/g, ' ')
+                .replace(/(-)/g, ' ')
+                .replace(/(=)/g, ' ')
+                .replace(/(:)/g, ' ')
+                .replace(/(;)/g, ' ')
+                .replace(/(\/)/g, ' ')
+                .replace('.', ' ')
+                .split(' '),
+                index = 1;
 
-            for (i = 0; i < words.length; i++) {
-
+            for (var i = 0; i < words.length; i++) {
                 if ((isPalindromes(words[i])) && (words[i]!== '')) {
                     jsConsole.writeLine(String.format("palindromes[{0}] - {1}", index, words[i]));
                     index++;

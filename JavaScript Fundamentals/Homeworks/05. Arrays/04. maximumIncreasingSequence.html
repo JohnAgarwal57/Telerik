@@ -26,34 +26,31 @@
     
         function findSequence(sequence) {
             var numbers = sequence.split(","),
-                count = 1, // variable for current sequence count
-                maxcount = 0, // variable for current max count
-                mostFrequent = numbers[0], // valable to kept the most frequent element, first the 0 element
-                i;
+                count = 1,
+                maxcount = 0,
+                mostFrequent = numbers[0],
+                current;
 
-            for (i = 1; i < numbers.length; i++) {
-                if (numbers[i - 1] == (numbers[i]-1)) { // //the task is pretty equal to previous only here the logic is different - it must check not if they're equal but if previous is equal to current-1
+            for (var i = 1; i < numbers.length; i++) {
+                if (numbers[i - 1] == (numbers[i]-1)) {
                     count++;              
-                }
-                else { // if not compare current count with max count
-                    if (count > maxcount) { // if current is bigger max get's it's value
+                } else {
+                    if (count > maxcount) {
                         maxcount = count;
-                        mostFrequent = numbers[i - 1]; // get's previous element, couse current isn't equal anymore
+                        mostFrequent = numbers[i - 1];
                     }
-                    count = 1; //then current begin from 1
+                    count = 1;
                 }
             }
 
-            if (count > maxcount) { //we must check again if the sequence is to the last element
+            if (count > maxcount) {
                 maxcount = count;
                 mostFrequent = numbers[numbers.length - 1];
             }
 
-            var current;
-
             for (i = 0; i < maxcount; i++)
             {
-                current = mostFrequent-maxcount+i+1; //here the logic isn't same too. It's not equal elements, but increasing and we got biggest element. So the equasion is biggest-lenght+i+1 - it's working :P
+                current = mostFrequent-maxcount+i+1;
                 jsConsole.writeLine(current);
             }
         }

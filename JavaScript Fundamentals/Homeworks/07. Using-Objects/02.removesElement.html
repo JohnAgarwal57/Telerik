@@ -42,7 +42,7 @@
             var newArr = [];
             
             for (var i = 0; i < this.length; i++) {
-                if (this[i] != element) {
+                if (this[i] !== element) {
                     newArr.push(this[i]);
                 }
             };
@@ -52,8 +52,7 @@
 
         function removeNumber(numbers, toBeRemoved) {
             var arr = numbers.split(','),
-                finalArr = arr.remove(toBeRemoved),
-                i;
+                finalArr = arr.remove(toBeRemoved);
 
             for (var i = 0; i < finalArr.length; i++) {
                 jsConsole.writeLine(finalArr[i]);

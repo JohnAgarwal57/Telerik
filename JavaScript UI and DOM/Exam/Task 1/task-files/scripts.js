@@ -1,14 +1,14 @@
 function createImagesPreviewer(selector, items) {
-	var selector = document.querySelector(selector),
-		leftDiv = document.createElement("div"),
-		rightDiv = document.createElement("div"),
-		elements = document.createElement("div"),
-		listElement = document.createElement("div"),
-		searchDiv = document.createElement("div"),
-		searchField = document.createElement("input");
-		paragraph = document.createElement("p");
+	var currentSelector = document.querySelector(selector),
+		leftDiv = document.createElement('div'),
+		rightDiv = document.createElement('div'),
+		elements = document.createElement('div'),
+		listElement = document.createElement('div'),
+		searchDiv = document.createElement('div'),
+		searchField = document.createElement('input');
+		paragraph = document.createElement('p');
 
-	divStyle(leftDiv,29, 300, animals[0].title, animals[0].url, 'mainDiv', 'left', 30, 30, 30, 20, null);
+	divStyle(leftDiv, 29, 300, animals[0].title, animals[0].url, 'mainDiv', 'left', 30, 30, 30, 20, null);
 	divStyle(rightDiv, 13, 370, null, null, 'listDiv', 'left', 30, 30 ,30, 20, 'overflow-y: hidden');
 
 	styleSearchDiv();
@@ -24,27 +24,27 @@ function createImagesPreviewer(selector, items) {
 		divStyle(currentElement, 90, 120, animals[i].title, animals[i].url, 'listElement', 'left', 14, 0, 0, 10, null);
 
 		elements.appendChild(currentElement);
-	};
+	}
 
 	rightDiv.appendChild(elements);
-	selector.appendChild(leftDiv);
-	selector.appendChild(rightDiv);
+	currentSelector.appendChild(leftDiv);
+	currentSelector.appendChild(rightDiv);
 
 	function divStyle(selector, width, height, text, url, classs, float, fontSize, marginTop, marginBottom, radius, overflow){
-		selector.style.width = width + "%";
-		selector.style.height = height + "px";
+		selector.style.width = width + '%';
+		selector.style.height = height + 'px';
 		selector.style.float = float;
 		selector.style.display = 'inline-block';
 		selector.classList.add(classs);
 		if (overflow !==null) {
-			selector.style.overflowY="scroll";
-		};
+			selector.style.overflowY='scroll';
+		}
 		
 	
 		if (url !== null) {
 			selector.appendChild(createStrong(text, fontSize, marginTop, marginBottom));
-			selector.appendChild(createImage(url, radius))
-		};
+			selector.appendChild(createImage(url, radius));
+		}
 	}
 
 	function createStrong(text, fontSize, marginTop, marginBottom) {
@@ -58,7 +58,7 @@ function createImagesPreviewer(selector, items) {
 		strong.style.marginTop = marginTop + 'px';
 		strong.style.marginBottom = marginBottom + 'px';
 
-		return strong;	
+		return strong;
 	}
 
 	function createImage(url, radius) {
@@ -95,15 +95,15 @@ function createImagesPreviewer(selector, items) {
 	}
 
 	function onMouseOver () {
-		if (this.id !== "selected") {
-			this.style.backgroundColor = "#CACACA";	
-		};	
+		if (this.id !== 'selected') {
+			this.style.backgroundColor = '#CACACA';
+		}
 	}
 
 	function onMouseOut () {
-		if (this.id !== "selected") {
-			this.style.backgroundColor = "#fff";	
-		};
+		if (this.id !== 'selected') {
+			this.style.backgroundColor = '#fff';
+		}
 	}
 
 	function onSearch () {
@@ -122,13 +122,13 @@ function createImagesPreviewer(selector, items) {
 				divStyle(currentElement, 90, 120, animals[i].title, animals[i].url, 'listElement', 'left', 14, 0, 0, 10, null);
 
 				elements.appendChild(currentElement);
-			};
-		};
+			}
+		}
 	}
 
 	if ( !String.prototype.contains ) {
-	    String.prototype.contains = function() {
-	        return String.prototype.indexOf.apply( this, arguments ) !== -1;
-	    };
+		String.prototype.contains = function() {
+			return String.prototype.indexOf.apply( this, arguments ) !== -1;
+		};
 	}
 }

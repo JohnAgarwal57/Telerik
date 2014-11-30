@@ -1,12 +1,12 @@
-var encryption = require('../utilities/encryption');
-var users = require('../data/usersData');
+var encryption = require('../utilities/encryption'),
+    users = require('../data/usersData');
 
 module.exports = {
-    createUser: function(req, res, next) {
+    createUser: function createUser(req, res, next) {
         var newUserData = req.body;
 
         if(newUserData.password !== newUserData.confirmPassword) {
-            return res.status(400).send("Passwords don't match!");
+            return res.status(400).send('Passwords don\'t match!');
         } else if(newUserData.password.length < 6 || newUserData.password.length > 20) {
             return res.status(400).send('Password must be between 6 and 20 symbols');
         } else {
@@ -23,43 +23,51 @@ module.exports = {
             });
         }
     },
-    updateUser: function(req, res, next) {
+    updateUser: function updateUser(req, res, next) {
         if (req.user._id == req.body._id || req.user.role == 'admin') {
             var updatedUserData = req.body;
 
             if (updatedUserData.password && updatedUserData.password.length > 0) {
                 if(updatedUserData.password !== updatedUserData.confirmPassword) {
-                    return res.status(400).send("Passwords don't match!");
+                    return res.status(400).send('Passwords don\'t match!');
                 }
                 updatedUserData.salt = encryption.generateSalt();
                 updatedUserData.hashPass = encryption.generateHashedPassword(newUserData.salt, newUserData.password);
             }
 
-            users.update({_id: req.body._id}, updatedUserData, function() {
-                res.end();
-            })
+            users.update({
+                    _id: req.body._id
+                },
+                updatedUserData,
+                function() {
+                    res.end();
+                });
         }
         else {
-            return res.status(400).send("You do not have permissions!");
+            return res.status(400).send('You do not have permissions!');
         }
     },
-    deleteUser: function(req, res, next) {
+    deleteUser: function deleteUser(req, res, next) {
         if (req.user._id || req.user.role == 'admin') {
-            users.remove({_id: req.user._id}, function() {
-                res.end();
-            })
+            users.remove({
+                    _id: req.user._id
+                }, function() {
+                    res.end();
+                });
         }
         else {
-            return res.status(400).send("You do not have permissions!");
+            return res.status(400).send('You do not have permissions!');
         }
     },
-    getAllUsers: function(req, res) {
-        users.all({}).exec(function(err, collection) {
-            if (err) {
-                return res.status(400).send('Users could not be loaded: ' + err);
-            }
+    getAllUsers: function getAllUsers(req, res) {
+        users
+            .all({})
+            .exec(function(err, collection) {
+                if (err) {
+                    return res.status(400).send('Users could not be loaded: ' + err);
+                }
 
-            res.send(collection);
-        })
+                res.send(collection);
+            });
     }
 };

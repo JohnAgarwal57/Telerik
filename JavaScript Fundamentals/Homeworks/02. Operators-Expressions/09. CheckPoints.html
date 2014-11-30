@@ -17,20 +17,13 @@
             x = 1.7,
             y = 2.3;    
 
-        if ((Math.pow(x, 2)) + (Math.pow(y, 2)) < (Math.pow(radius, 2)))
-        {
-        	// Similar like task 6, but with this extra checking:
-            if (x < -1 || x > width || y < 1 || y > height)  
-            {
+        if ((Math.pow(x, 2)) + (Math.pow(y, 2)) < (Math.pow(radius, 2))) {
+            if (x < -1 || x > width || y < 1 || y > height)  {
                 jsConsole.writeLine("The point(" + x +"," + y + ") is in the circle and out of the rectangle");
-            }
-            else
-            {
+            } else {
                 jsConsole.writeLine("The point(" + x +"," + y + ") is in the circle but in the rectangle too"); 
             }        
-        }
-        else
-        {
+        } else {
             jsConsole.writeLine("The point(" + x +"," + y + ") isn't in the circle at all!"); 
         }
 

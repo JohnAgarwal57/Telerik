@@ -12,18 +12,12 @@
 		// Task 4 : Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.
 
 		var number = 732,
-        // First we devide the number to 100. Why? Becouse we need the third number, and that's how the third will become first(right to left)
             tempNumber = number / 100;
-
-        // Then we get the remainder of 10. And if the third number is 7, the remainder will be 7 too.
         
         number = Math.round(tempNumber % 10);
-        if (number === 7)
-        {
+        if (number === 7) {
             jsConsole.writeLine("The third digit(right-to-left) IS number 7!");    
-        }
-        else
-        {
+        } else {
             jsConsole.writeLine("The third digit(right-to-left) IS NOT number 7!");  
         }
 	</script>

@@ -49,17 +49,23 @@
         */
 
         function makePoint(x,y) {
-            return { x: x, y: y };
+            return { 
+                x: x,
+                y: y 
+            };
         }
 
         function makeLine(point1, point2){
-            return { pointA: point1, pointB: point2 };
+            return { 
+                pointA: point1,
+                pointB: point2 
+            };
         }
 
         function calculateDistance(point1, point2) {
             var xDistance = point1.x - point2.x,
                 yDistance = point1.y - point2.y,
-                distance = Math.sqrt((xDistance * xDistance) + (yDistance * yDistance)); // The distance between two points is calculate by Pythagorean theorem c*c = a*a + b*b, so c = SQRT(a*a + b*b)
+                distance = Math.sqrt((xDistance * xDistance) + (yDistance * yDistance));
 
             return parseFloat(distance);
         }
@@ -69,7 +75,7 @@
                 b = calculateDistance(line2.pointA, line2.pointB),
                 c = calculateDistance(line3.pointA, line3.pointB);
 
-            if ( (a + b) > c && (a + c) > b && (b + c) > a) { // To be form a triangle every side must be shorter then the other two togheter
+            if ( (a + b) > c && (a + c) > b && (b + c) > a) {
                 jsConsole.writeLine("The triangle is possible");
             } else {
                 jsConsole.writeLine("The triangle is not possible");

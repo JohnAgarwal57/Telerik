@@ -24,9 +24,8 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		$('#main-content').append(div);
 
 		setActive($('#homeLink'));
-	};
-
-	var initChatPage = function(chatItems) {
+	},
+	initChatPage = function(chatItems) {
 		clearPage();
 
 		var username = localStorage.getItem('CrowdChatUserName');
@@ -40,25 +39,21 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		else {
 			$('#main-content').text('Please choose nickname on home page!');
 		}
-	};
-
-	var initAboutPage = function() {
+	},
+	initAboutPage = function() {
 		clearPage();
 
 		var h2 = $('<h2></h2>').text('Crowd chat SPA develop by ME :)');
 		$('#main-content').append(h2);
 		setActive($('#aboutLink'));
-	};
-
-	var clearPage = function() {
+	},
+	clearPage = function() {
 		$('#main-content').text(' ');
-	};
-
-	var showError = function(err) {
+	},
+	showError = function(err) {
 		$('#main-content').text(err.responseText);
-	};
-
-	var setMessageFeed = function(items) {
+	},
+	setMessageFeed = function(items) {
 		$('feed-container').html(' ');
 		var chatItems = [],
 			div = $('<div> </div>').attr('id', 'feed-container').addClass('feed-container');
@@ -77,17 +72,15 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		$('#main-content').append(div);
 
 		handleBarConvert($("#chat-template"), $('#feed-container'),chatItems);
-	};
-
-	var handleBarConvert = function (template, container, items) {
+	},
+	handleBarConvert = function (template, container, items) {
 		var currentTemplate = Handlebars.compile(template.html());
 
 		container.html(currentTemplate({
 			message : items
 		}));
-	};
-
-	var addChatArea = function() {
+	},
+	addChatArea = function() {
 		var div = $('<div> </div>')
 					.attr('id', 'chat-area')
 					.addClass('chat-area'),
@@ -108,9 +101,8 @@ define(['jquery', 'handlebars', 'kendo'], function ($) {
 		div.append(messageBox);
 		div.append(sendButton);
 		$('#main-content').append(div);
-	};
-
-	var setActive = function(selector) {
+	},
+	setActive = function(selector) {
 		$('.active').removeClass('active');
 		selector.addClass('active');
 	};

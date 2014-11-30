@@ -37,28 +37,21 @@
         */
 
         function checkForCorrectBrackets(someExpression) {
-            var brackets = 0, 
-                i;
+            var brackets = 0;
 
-            for (i = 0; i < someExpression.length; i++) {              
-                if (someExpression[i] == '(') {
+            for (var i = 0; i < someExpression.length; i++) {              
+                if (someExpression[i] === '(') {
                     brackets++; 
                 }
-                else if (someExpression[i] == ')') {
+                else if (someExpression[i] === ')') {
                     brackets--;  
                 }
 
                 if (brackets < 0) {
-                    /* if at some point there is closing bracket before oppening the 
-                     * bracket variable gonna become less than 0 so we just need to break
-                     * */
                     break;    
                 }
             }
 
-            /* To be the expression correct bracket needs to be 0 - exactly same number
-             * openning and closing brackets
-             * */
             if (brackets === 0) {
                 jsConsole.writeLine(String.format("The expression {0} is correct!", someExpression));              
             }

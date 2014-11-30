@@ -1,10 +1,10 @@
 app.factory('auth', function($http, $q, identity, UsersResource) {
-    return {
-        signup: function(user) {
-            var deferred = $q.defer();
+    var deferred = $q.defer();
 
-            var user = new UsersResource(user);
-            user.$save().then(function() {
+    return {
+        signup: function signup(user) {
+            var newUser = new UsersResource(user);
+            newUser.$save().then(function() {
                 deferred.resolve();
             }, function(response) {
                 deferred.reject(response);
@@ -12,9 +12,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
 
             return deferred.promise;
         },
-        update: function(user) {
-            var deferred = $q.defer();
-
+        update: function update(user) {
             var updatedUser = new UsersResource(user);
             updatedUser._id = identity.currentUser._id;
             updatedUser.$update().then(function() {
@@ -32,9 +30,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
 
             return deferred.promise;
         },
-        close: function(user) {
-            var deferred = $q.defer();
-
+        close: function close(user) {
             var deleteUser = new UsersResource(user);
             deleteUser._id = identity.currentUser._id;
 
@@ -49,9 +45,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
 
             return deferred.promise;
         },
-        login: function(user){
-            var deferred = $q.defer();
-
+        login: function login(user){
             $http.post('/login', user)
                 .success(function(response) {
                     if (response.success) {
@@ -72,9 +66,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
 
             return deferred.promise;
         },
-        logout: function() {
-            var deferred = $q.defer();
-
+        logout: function logout() {
             $http.post('/logout').success(function() {
                 identity.currentUser = undefined;
                 localStorage.removeItem('bootstrappedUserObject');
@@ -83,7 +75,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
 
             return deferred.promise;
         },
-        isAuthenticated: function() {
+        isAuthenticated: function isAuthenticated() {
             if (identity.isAuthenticated()) {
                 return true;
             }
@@ -91,7 +83,7 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
                 return $q.reject('not authorized');
             }
         },
-        isAuthorizedForRole: function(role) {
+        isAuthorizedForRole: function isAuthorizedForRole(role) {
             if (identity.isAuthorizedForRole(role)) {
                 return true;
             }
@@ -99,5 +91,5 @@ app.factory('auth', function($http, $q, identity, UsersResource) {
                 return $q.reject('not authorized');
             }
         }
-    }
+    };
 });

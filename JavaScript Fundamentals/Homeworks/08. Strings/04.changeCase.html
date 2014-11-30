@@ -73,32 +73,20 @@
                 indexOpenTag = someString.indexOf(upOpenTag),
                 indexCloseTag = someString.indexOf(upCloseTag); 
 
-            // Upcase
             while (indexOpenTag >= 0) 
             {     
-                // then till we find oppening tags we add in our exit string:
-                // someString before oppening tags(If there is such)
                 upString = upString + someString.substring(0, indexOpenTag);
-
-                // we place the oppening tag position after the tag itself
                 indexOpenTag += upOpenTag.length;
                 
-                // the we add the someString between tabs TO UPPER
                 upString = upString + someString.substr(indexOpenTag, indexCloseTag - indexOpenTag).toUpperCase();
-                
-                // then the someString AFTER the closing tabs is assigned to our original someString, 
-                // replacing it and we're ready to search for another tags, if there is such
-                // all of that till we find oppening tags
+
                 someString = someString.substr(indexCloseTag + upCloseTag.length, someString.length - indexCloseTag - upCloseTag.length);
                 
                 indexOpenTag = someString.indexOf(upOpenTag);
                 indexCloseTag = someString.indexOf(upCloseTag);
             }
 
-            // at the end we add any someString left after last closing tag, if there is such
             upString = upString + someString;
-
-            // Lower case
             indexOpenTag = upString.indexOf(lowOpenTag),
             indexCloseTag = upString.indexOf(lowCloseTag);
           
@@ -118,20 +106,18 @@
 
             lowString = lowString + upString;
 
-            // Mix case
             indexOpenTag = lowString.indexOf(mixOpenTag),
             indexCloseTag = lowString.indexOf(mixCloseTag);
 
             while (indexOpenTag >= 0) 
             {     
-                mixString = mixString + lowString.substring(0, indexOpenTag);
-
                 indexOpenTag += mixOpenTag.length;
                 
                 var textInMixTag = lowString.substr(indexOpenTag, indexCloseTag - indexOpenTag).toLowerCase(),
                     mixedText = '';
 
-                // When we found text in MixCase tag we loot him and replace every char with upper or lower on 50% chance
+                mixString = mixString + lowString.substring(0, indexOpenTag);
+
                 for (var i = 0; i < textInMixTag.length; i++) {
                     if (parseInt(Math.random()*2) > 0.5) {
                         mixedText = mixedText + textInMixTag[i].toLowerCase()
